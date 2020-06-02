@@ -1,4 +1,6 @@
 $colorFontMain: #2D2D2D;
+$colorLigthBlue : #0AAFE6;
+
 
 
 @function getTransparency($transparency) {
@@ -7,5 +9,6 @@ $colorFontMain: #2D2D2D;
 
 :export {
   colorFontMain: $colorFontMain;
+  colorLigthBlue: $colorLigthBlue;
   
 }
