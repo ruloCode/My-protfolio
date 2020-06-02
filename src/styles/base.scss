@@ -1,0 +1,20 @@
+
+*{
+  margin: 0;
+}
+body, html, #root, * {
+  margin: 0;
+	padding: 0;
+  box-sizing: border-box;
+}
+#root {
+	height: 100vh;
+  position: relative;
+  color: $colorFontMain;
+  font-family: $fontFamilyBase;
+}
+a{ 
+  color: $colorFontMain;
+  text-decoration: none;
+}
+

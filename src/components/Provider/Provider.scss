@@ -1,0 +1,23 @@
+.provider {
+  height: 100%;
+  padding: 2em;
+  overflow: hidden;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  .shape {
+    width: 500px;
+    position: absolute;
+    
+  }
+  .top-corner {
+    top: -3%;
+    right: -3%;
+  }
+  .bottom-corner {
+    bottom: -3%;
+    left: -3%;
+  }
+ 
+}
