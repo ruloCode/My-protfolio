@@ -11,11 +11,10 @@
   .shape {
     width: 500px;
     position: absolute;
-    
   }
   .top-corner {
-    top: -3%;
-    right: -3%;
+    top: -5%;
+    right: -5%;
   }
   .bottom-corner {
     bottom: -3%;
@@ -36,4 +35,20 @@
     }
   }
  
+  @include applyTo('m') {
+    .shape {
+      width: 300px;
+      position: absolute;
+    }
+    .social-media {
+      font-size: 1em;
+    }
+  }
+  @include applyTo('xs') {
+    .shape {
+      width: 200px;
+      position: absolute;
+    }
+  }
+
 }

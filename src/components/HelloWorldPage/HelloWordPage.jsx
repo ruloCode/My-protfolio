@@ -25,16 +25,16 @@ const HelloWorld = ({ children }) => {
 
         </div>
         <Link to={portfolio()}>
-        <div className='hello-world__profile__image-container'>
-          <img className='profile-image' src={WorkImage} alt='profile' />
-          <p >Portfolio</p>
-        </div>
+          <div className='hello-world__profile__image-container'>
+            <img className='profile-image' src={WorkImage} alt='profile' />
+            <p>Portfolio</p>
+          </div>
         </Link>
 
       </div>
       <div className='hello-world__description'>
         <p>
-          I'm Andres Santana a web designer & front‑end developer
+          I&apos;m Andres Santana a web designer & front‑end developer
           focused on crafting clean  & user‑friendly experiences
         </p>
 
