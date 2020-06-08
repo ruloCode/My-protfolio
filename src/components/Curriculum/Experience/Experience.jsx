@@ -1,11 +1,17 @@
 import React from 'react';
 import ExperienceItem from '../ExperienceItem/ExperienceItem';
+import WorkIcon from '../../../assets/work.png';
+
+import './Experience.scss';
 
 const Experience = ({ experience }) => {
   return (
-    <div className='experience-item'>
-      hola experiensa
-      {experience.map((experienceItem)=> (
+    <div className='experience'>
+      <div className='experience__header'>
+        <img src={WorkIcon} alt='workicon' />
+        <h3>Experience</h3>
+      </div>
+      {experience.map((experienceItem) => (
         <ExperienceItem item={experienceItem} />
       ))}
     </div>

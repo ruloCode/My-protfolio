@@ -19,12 +19,12 @@ const CV = {
   'experience': [
     {
       'company': 'Platzi Master',
+      'cover': 'https://static.platzi.com/media/avatars/Platzi-f730e65b-e92b-44d3-81c0-5c59c4dc4658.png',
       'role': 'Master Student',
       'contract': 'Contrato de prácticas',
       'startDate': '01/01/2019',
-      'endDate': '',
+      'endDate': 'Actually',
       'description': "Actually I design User interfaces for then make magic with Node and React.js also I am a part of the biggest latinoamerican developer community, where constantly I improve my skills and at the same time I have the opportunity to teach what I've learned",
-
     },
   ],
 };

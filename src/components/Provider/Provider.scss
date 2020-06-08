@@ -13,12 +13,12 @@
     position: absolute;
   }
   .top-corner {
-    top: -5%;
-    right: -5%;
+    top: -1%;
+    left: -6%;
   }
   .bottom-corner {
     bottom: -3%;
-    left: -3%;
+    left: 70%;
   }
   .social-media {
     position: absolute;
@@ -28,10 +28,13 @@
     left: 2%;
     .fab {
       margin: .3em;
-      
+      transition: .3s;
+    }
+    .fab:hover {
+      transform: scale(1.2);;
     }
     .fa-linkedin-in{
-      color: $colorLigthBlue;
+      color: white;
     }
   }
  

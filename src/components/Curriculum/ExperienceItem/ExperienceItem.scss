@@ -1,0 +1,38 @@
+.experience-item {
+  margin-top: 1em;
+  display: grid;
+  grid-template-columns: 15% 1fr;
+  &__cover {
+    padding: 1em;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    img {
+      width: 70%;
+    }
+  }
+  &__info {
+    position: relative;
+    display: grid;
+    grid-gap: .5em;
+    .company {
+      display: flex;
+      p {
+        margin-right: .5em;
+      }
+      .company-contract {
+        margin-left: .5em;
+
+      }
+    }
+    .time {
+      position: absolute;
+      top: 0;
+      right: 0;
+      display: flex;
+      p {
+        margin: 0 .5em;
+      }
+    }
+  }
+}
