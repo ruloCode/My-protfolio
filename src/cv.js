@@ -1,7 +1,7 @@
 const CV = {
   'name': 'Andrés Santana',
   'ocupation': 'Frontend web developer & UI designer',
-  'phone': '+573153580836',
+  'phone': '(+57) 3153580836',
   'email': 'drew.lizcano@gmail.com',
   'location': 'Bogotá D.C Colombia',
   'lenguajes': [

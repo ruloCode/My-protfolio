@@ -19,18 +19,54 @@ const Curriculum = () => {
         </div>
         <div className='container__info'>
           <div className='contact-container'>
-            <div className='info__contact phone'>
-              <i className='fas fa-phone-alt' />
-              phone
+
+            <div className='info__contact'>
+              <div className='info-label'>
+                <div className='icon-container'>
+                  <i className='fas fa-phone-alt' />
+                </div>
+                <div className='info-data'>
+                  <dt>Phone</dt>
+                  <dd>{phone}</dd>
+                </div>
+              </div>
             </div>
-            <div className='info__contact email'>
-              <i className='fas fa-envelope' />
-              email
+            <div className='info__contact '>
+              <div className='info-label'>
+                <div className='icon-container'>
+                  <i className='fas fa-envelope' />
+                </div>
+                <div className='info-data'>
+                  <dt>Email</dt>
+                  <dd>{email}</dd>
+                </div>
+              </div>
+            </div>
+            <div className='info__contact '>
+              <div className='info-label'>
+                <div className='icon-container'>
+                  <i className='fas fa-street-view' />
+                </div>
+                <div className='info-data'>
+                  <dt>Location</dt>
+                  <dd>{location}</dd>
+                </div>
+              </div>
+            </div>
+            {/* <div className='info__contact email'>
+              <div>
+
+                <dt>Email</dt>
+              </div>
+              <dd>{email}</dd>
             </div>
             <div className='info__contact location'>
-              <i className='fas fa-street-view' />
-              location
-            </div>
+              <div>
+
+                <dt>Email</dt>
+              </div>
+              <dd>{location}</dd>
+            </div> */}
           </div>
         </div>
       </div>
