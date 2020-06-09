@@ -6,7 +6,7 @@ import Education from './Education/Education';
 import cv from '../../cv';
 
 const Curriculum = () => {
-  const { name, ocupation, lenguajes, profesionalProfile, experience,education, phone, email, location } = cv;
+  const { name, ocupation, lenguajes, profesionalProfile, experience, education, phone, email, location } = cv;
   return (
     <div className='curriculumn'>
       <div className='curriculumn_name-container'>

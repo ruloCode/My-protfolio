@@ -1,9 +1,9 @@
-import React from 'react';
+import React, { useState } from 'react';
 
 import './EducationArea.scss';
 
 const EducationArea = ({ area }) => {
-  console.log(area);
+  const [showCourses, setShowCourses] = useState(false);
   return (
     <div className='education-area'>
       <div className='education-area__cover'>
@@ -12,9 +12,19 @@ const EducationArea = ({ area }) => {
       <div className='education-area__info'>
         <h3>{area.areaname}</h3>
         <p>{area.description}</p>
-        <dd>
-          {area.courses.length}
+        <dd onClick={() => {
+          setShowCourses(!showCourses);
+        }}
+        >
+          <span>{area.courses.length}</span>
+          {' '}
+          Courses
+          <i className={showCourses ? 'fas fa-chevron-circle-down colapse' : 'fas fa-chevron-circle-down'} />
         </dd>
+
+        <div className={showCourses ? 'info-courses' : 'info-courses hidden'}>
+          courses
+        </div>
       </div>
     </div>
   );

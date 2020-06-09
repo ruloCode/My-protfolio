@@ -1,3 +1,5 @@
+@import '../../../styles/index.scss';
+
 .education-area {
   margin-top: 1em;
   display: grid;
@@ -15,24 +17,28 @@
     position: relative;
     display: grid;
     grid-gap: .5em;
-    .company {
-      display: flex;
-      p {
-        margin-right: .5em;
-      }
-      .company-contract {
+    dd {
+      transition: .3s;
+      i {
         margin-left: .5em;
-
+        transition: .3s;
+      }
+      .colapse {
+        color: $colorLigthBlue;
+        transform: rotate(180deg);
+      }
+      span {
+        font-weight: bold;
       }
     }
-    .time {
-      position: absolute;
-      top: 0;
-      right: 0;
-      display: flex;
-      p {
-        margin: 0 .5em;
-      }
+    dd:hover {
+      color: $colorLigthBlue;
     }
+  }
+  .info-courses {
+    color: red;
+  }
+  .info-courses.hidden {
+    display: none;
   }
 }
