@@ -1,0 +1,14 @@
+@import '../../../styles/index.scss';
+
+.education {
+  margin-top: 1em;
+  &__header {
+    border-bottom: $colorFontMain solid 1px ;
+    display: flex;
+    align-items: center;
+    img {
+       width: 40px;
+       margin-right: 1em;
+    }
+  }
+}
