@@ -1,0 +1,20 @@
+.course-container {
+  display: grid;
+  grid-template-columns: 10% auto;
+  align-items: center;
+  margin-top: 1em;
+  &__cover {
+    img {
+      max-width: 3.5em;
+    }
+  }
+  &__info {
+    display: flex;
+    flex-direction: column;
+    align-items: space-between;
+    justify-content: space-evenly;
+    h4 {
+      margin-bottom: .5em;
+    }
+  }
+}

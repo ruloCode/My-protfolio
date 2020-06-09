@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
-
+import getStringFromDate from '../../../utils/date';
+import Course from '../Course/Course';
 import './EducationArea.scss';
 
 const EducationArea = ({ area }) => {
@@ -23,7 +24,17 @@ const EducationArea = ({ area }) => {
         </dd>
 
         <div className={showCourses ? 'info-courses' : 'info-courses hidden'}>
-          courses
+          {showCourses ? (
+            <div className='courses-container'>
+              {area.courses.map((course) => {
+                return (
+                  <Course course={course} />
+                );
+              })}
+            </div>
+          )
+
+            : '' }
         </div>
       </div>
     </div>

@@ -54,10 +54,10 @@ const CV = {
         {
           'name': 'Curso de Fundamentos de Pruebas de Software',
           'hours': 6,
-          'certificationdate': 43.926,
+          'certificationdate': '19/8/2019',
           'link': 'https://platzi.com/clases/pruebas-software/',
           'diplom': 'https://drive.google.com/file/d/1wAj6vjjnlWIeHrIDIdv3sWlqSe0j-0q_/view?usp=sharing',
-          'cover': 'https://drive.google.com/file/d/1xzNk8H7yPTxxnq9OOsA8Bqf1WcwVEPqd/view?usp=sharing',
+          'cover': 'https://firebasestorage.googleapis.com/v0/b/pepe-code.appspot.com/o/Curso%20de%20jQuery%20a%20JavaScript%20(1).webp?alt=media&token=7a8f6868-4ca3-433f-b841-23ac0c9770b7',
         },
       ],
     },
