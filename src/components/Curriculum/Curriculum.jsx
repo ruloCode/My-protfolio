@@ -1,12 +1,12 @@
 import React from 'react';
 import ProfilePhoto from '../../assets/perfilFinal.png';
-import PortfolioIcon from '../../assets/work.png';
 import './Curriculum.scss';
 import Experience from './Experience/Experience';
+import Education from './Education/Education';
 import cv from '../../cv';
 
 const Curriculum = () => {
-  const { name, ocupation, profesionalProfile, experience, phone, email, location } = cv;
+  const { name, ocupation, lenguajes, profesionalProfile, experience,education, phone, email, location } = cv;
   return (
     <div className='curriculumn'>
       <div className='curriculumn_name-container'>
@@ -53,21 +53,14 @@ const Curriculum = () => {
                 </div>
               </div>
             </div>
-            {/* <div className='info__contact email'>
-              <div>
-
-                <dt>Email</dt>
-              </div>
-              <dd>{email}</dd>
-            </div>
-            <div className='info__contact location'>
-              <div>
-
-                <dt>Email</dt>
-              </div>
-              <dd>{location}</dd>
-            </div> */}
           </div>
+          <div className='lenguaje-container'>
+            <h4>Lenguajes</h4>
+            <div className='lenguajes-container'>
+              {lenguajes.map((lenguaje) => (<p>{lenguaje}</p>))}
+            </div>
+          </div>
+
         </div>
       </div>
       <div className='curriculumn__cv-container'>
@@ -84,6 +77,7 @@ const Curriculum = () => {
           </p>
         </div>
         <Experience experience={experience} />
+        <Education education={education} />
       </div>
     </div>
   );
