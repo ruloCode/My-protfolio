@@ -3,14 +3,15 @@
 .education-area {
   margin-top: 1em;
   display: grid;
-  grid-template-columns: 15% 1fr;
+  grid-template-columns: 25% 1fr;
+  margin-bottom: 2em;
   &__cover {
     padding: 1em;
     display: flex;
     justify-content: center;
     align-items: flex-start;
     img {
-      width: 70%;
+      width: 90%;
     }
   }
   &__info {

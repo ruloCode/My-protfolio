@@ -4,7 +4,6 @@ import EducationArea from '../EducationceItem/EducationArea';
 import './Education.scss';
 
 const Education = ({ education }) => {
-  console.log(education);
   return (
     <div className='education'>
       <div className='education__header'>

@@ -1,150 +1,16 @@
 @import '../../styles/index.scss';
 
 .curriculumn {
-    width: 90%;
+    width: 100%;
     margin: 0 auto;
     height: 100%;
     display: grid;
-    grid-template-rows: 25% auto;
-    grid-template-columns: 82% auto;
+    grid-template-rows: auto auto auto;
     grid-template-areas:
-        'name profile'
-        'cv profile';
-  .curriculumn_name-container {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    padding: 1em 3em;
-    h2 {
-      font-size: 2.8em;
-      transition: .3s;
-    }
-    h2:hover {
-      color: $colorLigthBlue;
-    }
-    p {
-      font-size: 1.24em;
-    }
-  }                       
-  &__profile-container {
-    background: #2D2D2D;
-    grid-area: profile;
-    display: grid;
-    grid-template-rows: 26% auto;
-    position: relative;
-    top: 20%;
-    max-height: 40em;
-    border-radius: 2em;
-    box-shadow: 7px 7px 19px -2px rgba(0,0,0,0.75);
-    .cover-container {
-      position: relative;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      width: 100%;
-      height: 100%;
-        img {
-          width: 110%;
-          position: relative;
-          top: -54%;
-          left: 0%;
-          height: auto;
-          transition: .3s;
-        }
-        img:hover {
-          width: 112%;
-        }
-    }
-    
-    .contact-container {
-      display: flex;
-      flex-direction: column;
-      border-bottom: 2px solid #121212;
-      .info__contact {
-        padding: .5em;
-        color: white;
-        display: flex;
-        .info-label {
-          dt {
-            font-weight: bold;
-          }
-          display: flex;
-          align-items: center;
-          justify-content:center
-        }
-        .info-data {
-          display: flex;
-          flex-direction: column;
-          align-items: flex-start;
-        }
-      }
-    }
-  }
-  &__cv-container {
-    grid-area: cv;
-    padding: 0 3em 3em 0;
-    .cv-container__professional-profile {
-      p {
-        margin: 1em 0;
-      }
-    }
-  }
+        'name'
+        'profile'
+        'cv';
 }
 
 
-.professional-profile__header {
-  display: grid;
-  grid-template-columns: 50% 1fr;
-  .line {
-    width: 100%;
-    height: 100%;
 
-    .line-box1 {
-      width: 100%;
-      height: 50%;
-      border-bottom: $colorFontMain solid 1px;
-    }
-  }
-}
-
-.cv-container__experience {
-  .experience__header{
-    border-bottom: $colorFontMain 1px solid;
-    display: flex;
-    align-items: center;
-    img {
-      width: 40px;
-    }
-  }
-}
-
-.icon-container {
-  padding: 1em;
-  background-color: white;
-  border-radius: 50%;
-  max-width: 50px;
-  margin-right: 1em;
-
-  i {
-    color: $colorFontMain;
-    font-size: 1.3em;
-    max-width: 1.3em;
-  }
-}
-
-.lenguaje-container {
-  padding: 1em;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  color: white;
-  border-bottom: 2px solid #121212;
-
-  p {
-    text-transform: capitalize;
-    padding: .5em;
-  }
-}
