@@ -1,0 +1,23 @@
+@import '../../../styles/index.scss';
+
+.cover-container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  img {
+    width: 100%;
+    position: relative;
+    z-index: 4;
+  }
+  .loading-container {
+    position: absolute;
+    z-index: 3;
+    width: 300px;
+    height: 300px;
+    @include applyTo('m') {
+      width: 500px;
+      height: 500px;
+    }
+  }
+}

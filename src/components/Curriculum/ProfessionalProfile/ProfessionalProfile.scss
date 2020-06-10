@@ -1,0 +1,21 @@
+@import '../../../styles/index.scss';
+
+.professional-profile {
+  &__header {
+    display: grid;
+    grid-template-columns: auto auto;
+    margin: .5em 0;
+  }
+  .line {
+    width: 100%;
+    .line-box1 {
+      border-bottom: $colorFontMain solid 2px;
+      width: 100%;
+      height: 50%;
+
+    }
+  }
+  p {
+    margin: .5em 0;
+  }
+}
