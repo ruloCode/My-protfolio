@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './Modal.scss';
-import ModalContaner from './ModalContainer/ModalContainer';
+import ModalContainer from './ModalContainer/ModalContainer';
 
 const Modal = (props) => {
   if (!props.isOpen) {
@@ -9,9 +9,9 @@ const Modal = (props) => {
   }
   return ReactDOM.createPortal(
     <div className='modal'>
-      <ModalContaner>
+      <ModalContainer onClose={props.onClose}>
         {props.children}
-      </ModalContaner>
+      </ModalContainer>
     </div>, document.getElementById('portal'),
   );
 };

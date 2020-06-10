@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './Curriculum.scss';
 import Experience from './Experience/Experience';
 import Education from './Education/Education';
@@ -8,6 +8,7 @@ import ProfessionalProfile from './ProfessionalProfile/ProfessionalProfile';
 import cv from '../../cv';
 
 const Curriculum = () => {
+  
   const { name, ocupation, lenguajes, profesionalProfile, experience, education, phone, email, location } = cv;
   return (
     <div className='curriculumn'>
