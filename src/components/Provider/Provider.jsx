@@ -1,11 +1,20 @@
+/* eslint-disable jsx-a11y/label-has-associated-control */
 import React from 'react';
-import './Provider.scss';
+import { withRouter } from 'react-router-dom';
 import Shape1 from '../../assets/shape1.png';
 import Shape2 from '../../assets/shape2.png';
+import cv from '../../cv';
+import ContactContainer from './ContactContainer/ContactContainer';
 
-const Provider = ({ children }) => {
+import './Provider.scss';
+
+const Provider = (props) => {
+  const { children, history } = props;
+  const path = history.location.pathname;
+
   return (
     <div className='provider'>
+
       <div className='social-media'>
         <a rel='noopener noreferrer' target='_blank' href='https://github.com/rulo-code'>
           <i className='fab fa-github' />
@@ -19,10 +28,11 @@ const Provider = ({ children }) => {
         </a>
       </div>
       <img className='shape top-corner' src={Shape2} alt='shapeImage' />
-      <img className='shape bottom-corner' src={Shape1} alt='shapeImage' />
       {children}
+      <ContactContainer cv={cv} />
+
     </div>
   );
 };
 
-export default Provider;
+export default withRouter(Provider);

@@ -1,20 +1,24 @@
 .experience-item {
   margin-top: 1em;
   display: grid;
-  grid-template-columns: 15% 1fr;
+  grid-template-columns: 25% 1fr;
   &__cover {
     padding: 1em;
     display: flex;
     justify-content: center;
     align-items: flex-start;
     img {
-      width: 70%;
+      width: 90%;
     }
   }
   &__info {
+    padding-top: .5em;
     position: relative;
     display: grid;
     grid-gap: .5em;
+    span {
+      margin: 0 .5em;
+    }
     .company {
       display: flex;
       p {
@@ -26,13 +30,9 @@
       }
     }
     .time {
-      position: absolute;
-      top: 0;
-      right: 0;
+      opacity: 90%;
       display: flex;
-      p {
-        margin: 0 .5em;
-      }
+      
     }
   }
 }

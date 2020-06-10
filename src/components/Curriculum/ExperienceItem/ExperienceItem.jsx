@@ -13,12 +13,16 @@ const ExperienceItem = ({ item }) => {
         <h4>{role}</h4>
         <div className='company'>
           <p>{company}</p>
-          -
+          <span>
+            -
+          </span>
           <p className='company-contract'>{contract}</p>
         </div>
         <div className='time'>
           <p>{startDate}</p>
-          -
+          <span>
+            -
+          </span>
           <p>
             {endDate}
           </p>
