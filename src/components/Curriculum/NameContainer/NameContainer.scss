@@ -1,3 +1,5 @@
+@import '../../../styles/index.scss';
+
 .name-container {
   display: flex;
   justify-content: center;
@@ -14,5 +16,15 @@
   }
   .cover-container {
     width: 70%;
+    @include applyTo('xs') {
+      max-width: 15em;
+    }
+    @include applyTo('m') {
+      display: none;
+    }
+  }
+  @include applyTo('m') {
+    font-size: 1.5em;
+    margin-top: -2em;
   }
 }

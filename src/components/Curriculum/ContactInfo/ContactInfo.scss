@@ -20,6 +20,12 @@
       i {
         color: white
       }
+      @include applyTo('m') {
+        background: white;
+        i {
+          color: $colorFontMain;
+        }
+      }
     }
 
   }

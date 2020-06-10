@@ -29,7 +29,7 @@ const Provider = (props) => {
       </div>
       <img className='shape top-corner' src={Shape2} alt='shapeImage' />
       {children}
-      <ContactContainer cv={cv} />
+      <ContactContainer isOpen={path === '/'} cv={cv} />
 
     </div>
   );

@@ -10,6 +10,17 @@
         'name'
         'profile'
         'cv';
+    @include applyTo('m') {
+        grid-template-rows: 30% auto auto;
+        grid-template-columns: auto minmax(300px, 1fr);
+        grid-template-areas:
+        'name profile'
+        'profile'
+        'cv';
+        &__cv-container {
+            padding: 0 3em;
+        }
+    }
 }
 
 

@@ -12,9 +12,9 @@ const ProfileContainer = (props) => {
 
       <div className='profile-container__info'>
         <div className='contact-container'>
-          <ContactInfo label='phone' value={phone} />
-          <ContactInfo label='email' value={email} />
-          <ContactInfo label='location' value={location} />
+          <ContactInfo label='Phone' value={phone} />
+          <ContactInfo label='Email' value={email} />
+          <ContactInfo label='Location' value={location} />
         </div>
 
       </div>

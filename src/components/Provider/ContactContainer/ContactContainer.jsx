@@ -2,6 +2,7 @@
 import React, { useState, useRef } from 'react';
 import ContactInfo from '../../Curriculum/ContactInfo/ContactInfo';
 import useOutsideClick from '../../../hooks/useOutsideClick/useOutsideClick';
+import './ContactContainer.scss';
 
 const ContactContainer = (props) => {
   const { cv: { email, phone, location } } = props;
@@ -14,7 +15,8 @@ const ContactContainer = (props) => {
   return (
     <div
       ref={ref}
-      className='contact'
+      className={props.isOpen ? 'contact' : 'contact hidden'}
+
     >
       <label className='label' onClick={() => { setShowContact(!showContact); }}>
         Contact me
