@@ -1,0 +1,28 @@
+@import '../../../styles/index.scss';
+
+.project-modal {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+}
+.glide {
+  width: 100%;
+}
+.glide__slide img {
+  width: 100%;
+  
+}
+.glide__slides {
+  display: flex;
+}
+.glide__arrow {
+  color: $colorFontMain;
+}
+.glide__arrow--left {
+  left: -5%;
+}
+.glide__arrow--right {
+  right:  -5%;
+}
