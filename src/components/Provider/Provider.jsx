@@ -1,7 +1,6 @@
 /* eslint-disable jsx-a11y/label-has-associated-control */
 import React from 'react';
 import { withRouter } from 'react-router-dom';
-import Shape1 from '../../assets/shape1.png';
 import Shape2 from '../../assets/shape2.png';
 import cv from '../../cv';
 import ContactContainer from './ContactContainer/ContactContainer';
@@ -11,6 +10,7 @@ import './Provider.scss';
 const Provider = (props) => {
   const { children, history } = props;
   const path = history.location.pathname;
+  
 
   return (
     <div className='provider'>

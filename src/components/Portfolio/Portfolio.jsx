@@ -1,9 +1,8 @@
 import React, { useState } from 'react';
 import './Portfolio.scss';
-import Slider from 'react-slick';
+import { Link } from 'react-router-dom';
 import ProjectCard from './ProjectCard/ProjectCard';
-import Modal from '../Modal/Modal';
-import ProjectModal from './ProjectModal/ProjectModal';
+import Provider from '../Provider/Provider';
 
 const Portfolio = ({ children }) => {
   const [isOpen, setIsOpen] = useState(false);
@@ -11,29 +10,28 @@ const Portfolio = ({ children }) => {
     console.log('modal open');
     setIsOpen(!isOpen);
   };
-  const settings = {
-    dots: true,
-    infinite: true,
-    speed: 500,
-    slidesToShow: 1,
-    slidesToScroll: 1,
-  };
   return (
-    <div className='portfolio'>
-      <div className='portfolio__header'>
-        <h2>
-          My Portfolio
-        </h2>
-      </div>
-      <div className='portfolio__cards-container'>
-        <ProjectCard onClick={handleClose} />
+    <Provider>
+      <div className='portfolio'>
+
+        <div className='portfolio__header'>
+          <Link className='go-back home' to='/'>
+            <i className='fas fa-angle-double-left' />
+          </Link>
+          <h2>
+            My Portfolio
+          </h2>
+        </div>
+        <div className='portfolio__cards-container'>
+          <Link to='/project/1'>
+            <ProjectCard onClick={handleClose} />
+          </Link>
+
+        </div>
 
       </div>
-      <Modal onClose={handleClose} isOpen={isOpen}>
-        <ProjectModal />
+    </Provider>
 
-      </Modal>
-    </div>
   );
 };
 

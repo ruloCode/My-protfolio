@@ -92,5 +92,13 @@
       margin: 0 auto;
     }
   }
-  
+  @include  applyTo('xxs') {
+    position: relative;
+    top: 5%;
+    .profile-cover {
+      grid-area: photo;
+      width: 50%;
+      margin: 0 auto;
+    }
+  }
 }

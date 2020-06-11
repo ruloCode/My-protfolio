@@ -3,3 +3,4 @@
 export const helloWorld = () => '/';
 export const curriculum = () => '/curriculum';
 export const portfolio = () => '/portfolio';
+export const project = () => '/project/:id';

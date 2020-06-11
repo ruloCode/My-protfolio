@@ -2,11 +2,12 @@ import HelloWorld from '../components/HelloWorldPage/HelloWordPage';
 import Portfolio from '../components/Portfolio/Portfolio';
 import NotFound from '../components/Notfound/NotFound';
 import Curriculum from '../components/Curriculum/Curriculum';
-
+import Project from '../components/Portfolio/ProjectModal/Project';
 import {
   helloWorld,
   curriculum,
   portfolio,
+  project,
 } from './paths';
 
 export default [
@@ -23,6 +24,11 @@ export default [
   {
     path: curriculum(),
     component: Curriculum,
+    exact: true,
+  },
+  {
+    path: project(),
+    component: Project,
     exact: true,
   },
   {

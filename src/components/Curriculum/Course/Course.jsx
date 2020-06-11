@@ -22,7 +22,7 @@ const Course = ({ course }) => {
         </dd>
 
         <Modal onClose={handleClose} isOpen={isOpen}>
-          <a target='_blank' href={course.diplomdrive}>
+          <a rel='noopener noreferrer' target='_blank' href={course.diplomdrive}>
             <img src={course.diplom} alt='diplom' />
           </a>
 
