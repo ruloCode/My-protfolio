@@ -7,15 +7,6 @@ assignees: ''
 
 ---
 
----
-name: "Personal project request \U0001F3D7️"
-about: Suggest a new idea for the project.
-title: PP -
-labels: feature
-assignees: ''
-
----
-
 <!-- Provide a general summary of the feature in the Title above -->
 
 ## Checklist ✅
@@ -28,7 +19,7 @@ assignees: ''
 <!-- Checked checkbox should look like this: [x] -->
 
 - [ ] The issue is present in the latest release.
-- [ ] I have searched the [issues](https://github.com/Sphinx-Society/kaizen-web-client/issues) of this repository and believe that this is not a duplicate.
+- [ ] I have searched the [issues](https://github.com/rulo-code/My-protfolio/issues) of this repository and believe that this is not a duplicate.
 
 ## Summary 💡
 
@@ -39,5 +30,3 @@ assignees: ''
 <!-- Provide a description of the requirements the feature should accomplish. -->
 
 ## Motivation 🔦
-
-<!-- What are you trying to accomplish? How has the lack of this feature affected you? -->
