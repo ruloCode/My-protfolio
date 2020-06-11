@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import getStringFromDate from '../../../utils/date';
 import Course from '../Course/Course';
 import './EducationArea.scss';
 

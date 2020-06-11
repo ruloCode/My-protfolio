@@ -7,6 +7,7 @@
     display: grid;
     grid-template-rows: auto auto auto;
     grid-template-areas:
+    
         'name'
         'profile'
         'cv';
@@ -21,6 +22,11 @@
             padding: 0 3em;
         }
         
+    }
+    .go-back.home {
+        right: 5%;
+        top: 10%;
+        transform: rotate(-180deg);
     }
 }
 

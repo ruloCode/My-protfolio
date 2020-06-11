@@ -1,3 +1,4 @@
+/* eslint-disable react/no-array-index-key */
 import React from 'react';
 import EducationIcon from '../../../assets/education.png';
 import EducationArea from '../EducationceItem/EducationArea';
@@ -12,8 +13,8 @@ const Education = ({ education }) => {
 
       </div>
       <div>
-        {education.map((educationArea) => (
-          <EducationArea area={educationArea} />
+        {education.map((educationArea, index) => (
+          <EducationArea key={index} area={educationArea} />
         ))}
       </div>
 

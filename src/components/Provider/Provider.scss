@@ -14,7 +14,7 @@
   }
  
   .shape {
-    width: 250px;
+    width: 230px;
     position: absolute;
     @include applyTo('xs'){
       width: 300px;

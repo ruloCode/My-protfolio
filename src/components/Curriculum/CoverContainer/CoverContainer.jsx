@@ -1,4 +1,4 @@
-import React, { useState, useRef } from 'react';
+import React, { useState } from 'react';
 import CoverPhoto from '../../../assets/perfilFinal.png';
 import Loading from './Loading/Loading';
 import Modal from '../../Modal/Modal';

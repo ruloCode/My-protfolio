@@ -18,4 +18,17 @@ a{
   color: $colorFontMain;
   text-decoration: none;
 }
+.go-back {
+  background: $colorFontMain;
+  border-radius: 50%;
+  padding: .5em;
+  color: white;
+  max-width: 50px;
+  max-height: 50px;
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 10;
+}
 

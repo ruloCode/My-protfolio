@@ -1,3 +1,4 @@
+/* eslint-disable react/no-array-index-key */
 import React from 'react';
 import ExperienceItem from '../ExperienceItem/ExperienceItem';
 import WorkIcon from '../../../assets/work.png';
@@ -11,8 +12,8 @@ const Experience = ({ experience }) => {
         <img src={WorkIcon} alt='workicon' />
         <h3>Experience</h3>
       </div>
-      {experience.map((experienceItem) => (
-        <ExperienceItem item={experienceItem} />
+      {experience.map((experienceItem, index) => (
+        <ExperienceItem key={index} item={experienceItem} />
       ))}
     </div>
   );
