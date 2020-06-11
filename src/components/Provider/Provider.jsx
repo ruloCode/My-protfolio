@@ -10,7 +10,15 @@ import './Provider.scss';
 const Provider = (props) => {
   const { children, history } = props;
   const path = history.location.pathname;
-  
+  const renderPath = () => {
+    if (path === '/portfolio') {
+      return true;
+    }
+    if (path === '/') {
+      return true;
+    }
+    return false
+  };
 
   return (
     <div className='provider'>
@@ -29,7 +37,7 @@ const Provider = (props) => {
       </div>
       <img className='shape top-corner' src={Shape2} alt='shapeImage' />
       {children}
-      <ContactContainer isOpen={path === '/'} cv={cv} />
+      <ContactContainer isOpen={renderPath()} cv={cv} />
 
     </div>
   );

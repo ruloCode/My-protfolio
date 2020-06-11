@@ -6,12 +6,17 @@
   grid-template-rows: 15% auto;
   grid-gap: .5em;
   position: relative;
-  z-index: 6;
+  z-index: 5;
+  animation: fadein .5s;
   &__header {
     display: flex;
     justify-content: center;
     align-items: center;
     position: relative;
+    flex-direction: column;
+    img {
+      max-width: 40px;
+    }
     
   }
   &__cards-container {
