@@ -1,3 +1,4 @@
+@import "node_modules/@glidejs/glide/src/assets/sass/glide.core";
 /* Foundations */
 @import './foundations/colors.scss';
 @import './foundations/typography.scss';
@@ -11,3 +12,5 @@
 @import './mixins.scss';
 
 /* General classes */
+@import "~slick-carousel/slick/slick.css"; 
+@import "~slick-carousel/slick/slick-theme.css";
