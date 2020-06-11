@@ -5,6 +5,7 @@ import Glide from '@glidejs/glide';
 import { Link } from 'react-router-dom';
 import './Project.scss';
 import Kaizen from '../../../assets/kaizen.png';
+import Slides from './Slides/Slides';
 
 const Project = () => {
   useEffect(() => {
@@ -19,16 +20,6 @@ const Project = () => {
   }, []);
   return (
     <div className='project'>
-      <div className='project__header'>
-        <Link className='go-back' to='/portfolio'>
-          <i className='fas fa-angle-double-left' />
-        </Link>
-        <div className='project-cover'>
-          <img src={Kaizen} alt='logo-kaizen' />
-        </div>
-        <h2>Project name</h2>
-
-      </div>
       <div className='images glide'>
         <div className='glide__track' data-glide-el='track'>
           <ul className='glide__slides'>
@@ -38,11 +29,6 @@ const Project = () => {
                 <img alt='slide' className='slide-image' src='https://firebasestorage.googleapis.com/v0/b/pepe-code.appspot.com/o/login.png?alt=media&token=d59f92d1-dc0d-4b08-b653-510d6dde36c3' />
               </div>
             </li>
-            <li className='glide__slide'>
-              <div className='image-container'>
-                <img alt='slide' className='slide-image' src='https://firebasestorage.googleapis.com/v0/b/pepe-code.appspot.com/o/pepe.jpg?alt=media&token=cbab779b-5542-46aa-90bb-96773d7632ed' />
-              </div>
-            </li>
 
           </ul>
         </div>
@@ -50,6 +36,16 @@ const Project = () => {
           <button type='button' className='glide__arrow glide__arrow--left' data-glide-dir='<'><i className='fas fa-chevron-circle-left' /></button>
           <button type='button' className='glide__arrow glide__arrow--right' data-glide-dir='>'><i className='fas fa-chevron-circle-right' /></button>
         </div>
+      </div>
+      <div className='project__header'>
+        <Link className='go-back' to='/portfolio'>
+          <i className='fas fa-angle-double-left' />
+        </Link>
+        <div className='project-cover'>
+          <img src={Kaizen} alt='logo-kaizen' />
+        </div>
+        <h2>Project name</h2>
+
       </div>
 
       <div className='project__info'>

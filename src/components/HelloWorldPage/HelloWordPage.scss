@@ -4,6 +4,7 @@
   display: grid;
 
   grid-gap: 1em;
+  animation: fadein 1.5s;
   &__title {
     font-family: $fontFamilySecond;
     display: flex;

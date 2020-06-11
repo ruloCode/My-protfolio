@@ -60,15 +60,8 @@
     display: grid;
     grid-gap: .5em;
     flex-direction: column;
-    box-shadow: 1px 1px 1px #000;
   }
   .contact-container-toggle.hidden {
     display: none;
   }
- 
- 
-
-}
-.provider.overflow {
-  overflow: hidden;
 }

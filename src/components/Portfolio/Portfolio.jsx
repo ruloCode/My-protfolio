@@ -3,6 +3,7 @@ import './Portfolio.scss';
 import { Link } from 'react-router-dom';
 import ProjectCard from './ProjectCard/ProjectCard';
 import Provider from '../Provider/Provider';
+import Crane from '../../assets/crane.png';
 
 const Portfolio = ({ children }) => {
   const [isOpen, setIsOpen] = useState(false);
@@ -18,6 +19,7 @@ const Portfolio = ({ children }) => {
           <Link className='go-back home' to='/'>
             <i className='fas fa-angle-double-left' />
           </Link>
+          <img src={Crane} alt='crane' />
           <h2>
             My Portfolio
           </h2>
