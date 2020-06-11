@@ -1,5 +1,6 @@
 import React, { useRef } from 'react';
 import useOutsideClick from '../../../hooks/useOutsideClick/useOutsideClick';
+import './ModalContainer.scss';
 
 const ModalContainer = (props) => {
   const ref = useRef(null);
