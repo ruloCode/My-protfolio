@@ -1,7 +1,7 @@
 export const initialState = {
   user: {
     name: 'Andrés Santana',
-    cover: 'https://firebasestorage.googleapis.com/v0/b/pepe-code.appspot.com/o/perfilFinal-min.png?alt=media&token=78033d70-f675-492b-ad00-21eb9f808446',
+    cover: 'https://firebasestorage.googleapis.com/v0/b/pepe-code.appspot.com/o/perfilFinal.png?alt=media&token=c3c57664-0c8f-46a5-82ba-a693349c1a53',
   },
   portfolio: [
     {
