@@ -1,18 +1,18 @@
 import React from 'react';
 import CoverContainer from '../CoverContainer/CoverContainer';
-import cv from '../../../cv';
 
 import './NameContainer.scss';
 
-const NameContainer = () => {
+const NameContainer = ({ cv }) => {
+  const { name, ocupation } = cv;
   return (
     <div className='name-container'>
       <div className='cover-container'>
         <CoverContainer />
       </div>
       <div className='name'>
-        <h2>{cv.name}</h2>
-        <p>{cv.ocupation}</p>
+        <h2>{name}</h2>
+        <p>{ocupation}</p>
       </div>
     </div>
   );

@@ -1,13 +1,17 @@
 import React from 'react';
 import { BrowserRouter, Route, Switch } from 'react-router-dom';
+import { Provider } from 'react-redux';
+import store from '../redux/store';
+
 import routes from './routes';
 
 const App = () => (
   <BrowserRouter>
-
-    <Switch>
-      {routes.map((route) => <Route key={route.path} {...route} />)}
-    </Switch>
+    <Provider store={store}>
+      <Switch>
+        {routes.map((route) => <Route key={route.path} {...route} />)}
+      </Switch>
+    </Provider>
 
   </BrowserRouter>
 );

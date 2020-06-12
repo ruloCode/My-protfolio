@@ -1,18 +1,30 @@
+/* eslint-disable react/jsx-indent */
 import React from 'react';
+import { withRouter, Redirect } from 'react-router-dom';
+
+import { useDispatch } from 'react-redux';
+
+import { setProject } from '../../../redux/user/user.actions';
 import './ProjectCard.scss';
+import { helloWorld } from '../../../routes/paths';
 
 const ProjectCard = (props) => {
-
+  const dispatch = useDispatch();
+  const { name, description, preview, id } = props;
+  const onClick = () => {
+    dispatch(setProject({ project: props }));
+    props.history.push(`./project/${id}`);
+  };
   return (
-    <div className='project-card'>
+    <div tabIndex={0} role='button' onClick={onClick} className='project-card'>
       <div className='project-card__cover'>
-        <img alt='project-cover' src='https://firebasestorage.googleapis.com/v0/b/pepe-code.appspot.com/o/login.png?alt=media&token=d59f92d1-dc0d-4b08-b653-510d6dde36c3' />
+        <img alt='project-cover' src={preview} />
       </div>
       <div className='project-card__info'>
-        <h3>Kaizen</h3>
-        <p>Description bla bla bla bla bla bla bla bla bl;a bla bla</p>
+        <h3>{name}</h3>
+        <p>{description}</p>
       </div>
     </div>
   );
 };
-export default ProjectCard;
+export default withRouter(ProjectCard);

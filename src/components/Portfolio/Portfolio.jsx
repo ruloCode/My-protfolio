@@ -1,16 +1,20 @@
-import React, { useState } from 'react';
+import React, { useEffect } from 'react';
 import './Portfolio.scss';
 import { Link } from 'react-router-dom';
+import { useSelector, useDispatch } from 'react-redux';
+
 import ProjectCard from './ProjectCard/ProjectCard';
 import Provider from '../Provider/Provider';
 import Crane from '../../assets/crane.png';
+import { setProject } from '../../redux/user/user.actions';
 
 const Portfolio = ({ children }) => {
-  const [isOpen, setIsOpen] = useState(false);
-  const handleClose = () => {
-    console.log('modal open');
-    setIsOpen(!isOpen);
-  };
+  const dispatch = useDispatch();
+  useEffect(() => {
+    dispatch(setProject({ project: null }));
+  }, []);
+  const portfolio = useSelector((state) => state.user.portfolio);
+
   return (
     <Provider>
       <div className='portfolio'>
@@ -25,9 +29,11 @@ const Portfolio = ({ children }) => {
           </h2>
         </div>
         <div className='portfolio__cards-container'>
-          <Link to='/project/1'>
-            <ProjectCard onClick={handleClose} />
-          </Link>
+          {portfolio.map((project) => {
+            return (
+              <ProjectCard {...project} />
+            );
+          })}
 
         </div>
 
