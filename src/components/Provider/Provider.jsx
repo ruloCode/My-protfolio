@@ -4,7 +4,8 @@ import { withRouter } from 'react-router-dom';
 import Shape2 from '../../assets/shape2.png';
 import cv from '../../cv';
 import ContactContainer from './ContactContainer/ContactContainer';
-
+import VectorBlue from '../../assets/Vector-blue.png';
+import Shadow from '../../assets/shadow.png';
 import './Provider.scss';
 
 const Provider = (props) => {
@@ -35,7 +36,8 @@ const Provider = (props) => {
           <i className='fab fa-twitter' />
         </a>
       </div>
-      <img className='shape top-corner' src={Shape2} alt='shapeImage' />
+      <img className='shape top-corner' src={VectorBlue} alt='shapeImage' />
+      <img className='shape top-corner shadow' src={Shadow} alt='shapeImage' />
       {children}
       <ContactContainer isOpen={renderPath()} cv={cv} />
 

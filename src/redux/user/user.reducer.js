@@ -56,7 +56,7 @@ export const initialState = {
           url: 'https://firebasestorage.googleapis.com/v0/b/pepe-code.appspot.com/o/iMac%20-%202.png?alt=media&token=56ba4b84-737c-4f65-ae5f-55cd2f1f9c8e',
         },
       ],
-      repository: 'https://github.com/Sphinx-Society/kaizen-web-client',
+      repository: 'https://github.com/rulo-code/My-protfolio',
       technologies: [
         {
           name: 'react',
@@ -100,7 +100,7 @@ export const initialState = {
         'company': 'Platzi Master',
         'cover': 'https://firebasestorage.googleapis.com/v0/b/pepe-code.appspot.com/o/master.webp?alt=media&token=d4b764b4-bca5-4aff-a496-febdd0fe6a38',
         'role': 'Master Student',
-        'contract': 'Contrato de prácticas',
+        'contract': 'Internship contract',
         'startDate': 'Jan, 2020',
         'endDate': 'Actually',
         'description': 'Open source projects development using SCRUM methodology, with technologies such as React, Redux, React Router in the frontend; Node JS, Express, Passport, REST APIs, MongoDB, in the backend and database and Jest to perform unit tests.',
@@ -113,7 +113,7 @@ export const initialState = {
         'cover': 'https://firebasestorage.googleapis.com/v0/b/pepe-code.appspot.com/o/escuelajs%20(1).jpg?alt=media&token=775ac02e-07c7-4198-aeab-0dd69ad63a69',
         'courses': [
           {
-            'name': 'Curso de Integración Backend con Frontend 2019',
+            'name': 'Backend and Frontend Integration Course',
             'hours': 6,
             'certificationdate': 'Abr 5, 2020',
             'link': 'https://platzi.com/clases/pruebas-software/',
@@ -122,7 +122,7 @@ export const initialState = {
             'diplomdrive': 'https://drive.google.com/file/d/1z78s-J59VR7KZzMuehTqvjUJUJkhAg2x/view',
           },
           {
-            'name': 'Curso de Server Side Render con Express',
+            'name': 'Server Side Render with Expres Courses',
             'hours': 6,
             'certificationdate': 'Mar 10, 2020',
             'link': 'https://platzi.com/clases/pruebas-software/',
@@ -131,7 +131,7 @@ export const initialState = {
             'diplomdrive': 'https://drive.google.com/file/d/1z78s-J59VR7KZzMuehTqvjUJUJkhAg2x/view',
           },
           {
-            'name': 'Curso de Asincronismo con JavaScript',
+            'name': 'Asynchronism with JavaScript Course',
             'hours': 6,
             'certificationdate': 'Feb 2, 2020',
             'link': 'https://platzi.com/clases/pruebas-software/',
@@ -140,7 +140,7 @@ export const initialState = {
             'diplomdrive': 'https://drive.google.com/file/d/1z78s-J59VR7KZzMuehTqvjUJUJkhAg2x/view',
           },
           {
-            'name': 'Curso de Autenticación con Passport.js',
+            'name': 'Passport.js Autentication Course',
             'hours': 6,
             'certificationdate': 'Jen 24, 2020',
             'link': 'https://platzi.com/clases/pruebas-software/',
@@ -149,7 +149,7 @@ export const initialState = {
             'diplomdrive': 'https://drive.google.com/file/d/1z78s-J59VR7KZzMuehTqvjUJUJkhAg2x/view',
           },
           {
-            'name': 'Curso de Backend con Node.js',
+            'name': 'Backend with Node.js Course',
             'hours': 6,
             'certificationdate': 'Nov 1, 2019',
             'link': 'https://platzi.com/clases/pruebas-software/',
@@ -158,7 +158,7 @@ export const initialState = {
             'diplomdrive': 'https://drive.google.com/file/d/1z78s-J59VR7KZzMuehTqvjUJUJkhAg2x/view',
           },
           {
-            'name': 'Curso de React Router y Redux',
+            'name': 'React Router ans Redux Course',
             'hours': 6,
             'certificationdate': 'Oct 12, 2019',
             'link': 'https://platzi.com/clases/pruebas-software/',
@@ -167,7 +167,7 @@ export const initialState = {
             'diplomdrive': 'https://drive.google.com/file/d/1z78s-J59VR7KZzMuehTqvjUJUJkhAg2x/view',
           },
           {
-            'name': 'Curso Práctico de React JS',
+            'name': 'React JS Workshop',
             'hours': 6,
             'certificationdate': 'Sep 26, 2019',
             'link': 'https://platzi.com/clases/pruebas-software/',
@@ -176,7 +176,7 @@ export const initialState = {
             'diplomdrive': 'https://drive.google.com/file/d/1z78s-J59VR7KZzMuehTqvjUJUJkhAg2x/view',
           },
           {
-            'name': 'Curso Profesional de JavaScript',
+            'name': 'JavaScript Professional Course',
             'hours': 6,
             'certificationdate': 'Sep 20, 2019',
             'link': 'https://platzi.com/clases/pruebas-software/',
@@ -185,7 +185,7 @@ export const initialState = {
             'diplomdrive': 'https://drive.google.com/file/d/1z78s-J59VR7KZzMuehTqvjUJUJkhAg2x/view',
           },
           {
-            'name': 'Curso de Frontend Developer',
+            'name': 'Frontend Developer Course',
             'hours': 6,
             'certificationdate': 'Ags 19, 2019',
             'link': 'https://platzi.com/clases/pruebas-software/',
@@ -194,7 +194,7 @@ export const initialState = {
             'diplomdrive': 'https://drive.google.com/file/d/1z78s-J59VR7KZzMuehTqvjUJUJkhAg2x/view',
           },
           {
-            'name': 'Curso de Prework: Buenas Prácticas y Entorno de Desarrollo',
+            'name': 'Prework Course: Good Practices and Development Environment',
             'hours': 6,
             'certificationdate': 'Ags 16, 2019',
             'link': 'https://platzi.com/clases/pruebas-software/',
@@ -203,7 +203,7 @@ export const initialState = {
             'diplomdrive': 'https://drive.google.com/file/d/1z78s-J59VR7KZzMuehTqvjUJUJkhAg2x/view',
           },
           {
-            'name': 'Fundamentos de JavaScript',
+            'name': 'JavaScript Basics Course',
             'hours': 6,
             'certificationdate': 'Ags 10, 2019',
             'link': 'https://platzi.com/clases/pruebas-software/',
@@ -220,7 +220,7 @@ export const initialState = {
         'cover': 'https://firebasestorage.googleapis.com/v0/b/pepe-code.appspot.com/o/42.webp?alt=media&token=1a024cde-0ee6-48c7-a936-43366f4e703c',
         'courses': [
           {
-            'name': 'Curso de React Avanzado',
+            'name': 'Advanced React Course',
             'hours': 6,
             'certificationdate': 'Abr 29, 2020',
             'link': 'https://platzi.com/clases/pruebas-software/',
@@ -229,7 +229,7 @@ export const initialState = {
             'diplomdrive': 'https://drive.google.com/file/d/1z78s-J59VR7KZzMuehTqvjUJUJkhAg2x/view',
           },
           {
-            'name': 'Curso de End to End Testing con Cypress',
+            'name': 'End to End Testing with Cypress Course',
             'hours': 6,
             'certificationdate': 'Abr 24, 2020',
             'link': 'https://platzi.com/clases/pruebas-software/',
@@ -238,7 +238,7 @@ export const initialState = {
             'diplomdrive': 'https://drive.google.com/file/d/1z78s-J59VR7KZzMuehTqvjUJUJkhAg2x/view',
           },
           {
-            'name': 'Curso de Fundamentos de Pruebas de Software',
+            'name': 'Software Testing Fundamentals Course',
             'hours': 6,
             'certificationdate': 'Abr 5, 2020',
             'link': 'https://platzi.com/clases/pruebas-software/',
@@ -247,7 +247,7 @@ export const initialState = {
             'diplomdrive': 'https://drive.google.com/file/d/1z78s-J59VR7KZzMuehTqvjUJUJkhAg2x/view',
           },
           {
-            'name': 'Curso Básico de GraphQL',
+            'name': 'GraphQL Basic Course',
             'hours': 6,
             'certificationdate': 'Abr 2, 2020',
             'link': 'https://platzi.com/clases/pruebas-software/',
@@ -256,7 +256,7 @@ export const initialState = {
             'diplomdrive': 'https://drive.google.com/file/d/1z78s-J59VR7KZzMuehTqvjUJUJkhAg2x/view',
           },
           {
-            'name': 'Curso de Redux por Bedu',
+            'name': 'Redux by Bedu Course',
             'hours': 6,
             'certificationdate': 'Mar 30, 2020',
             'link': 'https://platzi.com/clases/pruebas-software/',
@@ -265,7 +265,7 @@ export const initialState = {
             'diplomdrive': 'https://drive.google.com/file/d/1z78s-J59VR7KZzMuehTqvjUJUJkhAg2x/view',
           },
           {
-            'name': 'Curso de React Router',
+            'name': 'React Router Course',
             'hours': 6,
             'certificationdate': 'Mar 19, 2020',
             'link': 'https://platzi.com/clases/pruebas-software/',
@@ -274,7 +274,7 @@ export const initialState = {
             'diplomdrive': 'https://drive.google.com/file/d/1z78s-J59VR7KZzMuehTqvjUJUJkhAg2x/view',
           },
           {
-            'name': 'Curso de Sistemas de Diseño para Desarrolladores',
+            'name': 'Design Systems for Developers Course',
             'hours': 6,
             'certificationdate': 'Mar 17, 2020',
             'link': 'https://platzi.com/clases/pruebas-software/',
@@ -283,7 +283,7 @@ export const initialState = {
             'diplomdrive': 'https://drive.google.com/file/d/1z78s-J59VR7KZzMuehTqvjUJUJkhAg2x/view',
           },
           {
-            'name': 'Curso de Sistemas de Diseño',
+            'name': 'Design Systems Course',
             'hours': 6,
             'certificationdate': 'Mar 17, 2020',
             'link': 'https://platzi.com/clases/pruebas-software/',
@@ -292,7 +292,7 @@ export const initialState = {
             'diplomdrive': 'https://drive.google.com/file/d/1z78s-J59VR7KZzMuehTqvjUJUJkhAg2x/view',
           },
           {
-            'name': 'Curso de Adobe XD',
+            'name': 'Adobe XD course',
             'hours': 6,
             'certificationdate': 'Mar 17, 2020',
             'link': 'https://platzi.com/clases/pruebas-software/',
@@ -301,7 +301,7 @@ export const initialState = {
             'diplomdrive': 'https://drive.google.com/file/d/1z78s-J59VR7KZzMuehTqvjUJUJkhAg2x/view',
           },
           {
-            'name': 'Curso de Introducción a la Terminal y Línea de Comandos',
+            'name': 'Introduction to Terminal and Command Line Course',
             'hours': 6,
             'certificationdate': 'Mar 4, 2020',
             'link': 'https://platzi.com/clases/pruebas-software/',
@@ -310,7 +310,7 @@ export const initialState = {
             'diplomdrive': 'https://drive.google.com/file/d/1z78s-J59VR7KZzMuehTqvjUJUJkhAg2x/view',
           },
           {
-            'name': 'Curso de Unit Testing con Jest en React',
+            'name': 'Unit Testing with Jest in React Course ',
             'hours': 6,
             'certificationdate': 'Mar 2, 2020',
             'link': 'https://platzi.com/clases/pruebas-software/',
@@ -320,16 +320,16 @@ export const initialState = {
           },
 
           {
-            'name': 'Curso de Preprocesadores CSS',
+            'name': 'Design introduction course',
             'hours': 6,
             'certificationdate': 'Feb 27, 2020',
             'link': 'https://platzi.com/clases/pruebas-software/',
             'cover': 'https://firebasestorage.googleapis.com/v0/b/pepe-code.appspot.com/o/Curso%20de%20Introducci%C3%B3n%20al%20Dise%C3%B1o%20(1).webp?alt=media&token=0f5f1213-55aa-49c2-abec-2bf8c879f08e',
-            'diplom': 'https://firebasestorage.googleapis.com/v0/b/pepe-code.appspot.com/o/diploma-fundamentos-diseno_page-0001%20(1).jpg?alt=media&token=5481adc8-7de2-43d5-9a50-6f08fbf98c87',
+            'diplom': 'https://firebasestorCurso de Preprocesadores CSSage.googleapis.com/v0/b/pepe-code.appspot.com/o/diploma-fundamentos-diseno_page-0001%20(1).jpg?alt=media&token=5481adc8-7de2-43d5-9a50-6f08fbf98c87',
             'diplomdrive': 'https://drive.google.com/file/d/1z78s-J59VR7KZzMuehTqvjUJUJkhAg2x/view',
           },
           {
-            'name': 'Curso de Webpack',
+            'name': 'Webpack Course',
             'hours': 6,
             'certificationdate': 'Feb 7, 2020',
             'link': 'https://platzi.com/clases/pruebas-software/',
@@ -338,7 +338,7 @@ export const initialState = {
             'diplomdrive': 'https://drive.google.com/file/d/1z78s-J59VR7KZzMuehTqvjUJUJkhAg2x/view',
           },
           {
-            'name': 'Fundamentos de Docker',
+            'name': 'Docker Fundamentals',
             'hours': 6,
             'certificationdate': 'Jen 5, 2020',
             'link': 'https://platzi.com/clases/pruebas-software/',
@@ -347,7 +347,7 @@ export const initialState = {
             'diplomdrive': 'https://drive.google.com/file/d/1z78s-J59VR7KZzMuehTqvjUJUJkhAg2x/view',
           },
           {
-            'name': 'Curso de Node.js',
+            'name': 'Node.js Course',
             'hours': 6,
             'certificationdate': 'Oct 24, 2019',
             'link': 'https://platzi.com/clases/pruebas-software/',
@@ -356,17 +356,17 @@ export const initialState = {
             'diplomdrive': 'https://drive.google.com/file/d/1z78s-J59VR7KZzMuehTqvjUJUJkhAg2x/view',
           },
           {
-            'name': 'Curso de Preprocesadores CSS',
+            'name': 'CSS Preprocessors Course',
             'hours': 6,
             'certificationdate': 'Oct 24, 2019',
             'link': 'https://platzi.com/clases/pruebas-software/',
             'cover': 'https://firebasestorage.googleapis.com/v0/b/pepe-code.appspot.com/o/Curso%20de%20Preprocesadores%20CSS%20(1).webp?alt=media&token=ad529548-3b3e-4e5e-afce-b030df8d9ec1',
-            'diplom': 'https://firebasestorage.googleapis.com/v0/b/pepe-code.appspot.com/o/diploma-preprocesadores%20(1)_page-0001%20(1).jpg?alt=media&token=f5d71ae5-03a0-4f24-9b81-cbc5addcff51',
+            'diplom': 'https://firebasesCurso de Preprocesadores CSStorage.googleapis.com/v0/b/pepe-code.appspot.com/o/diploma-preprocesadores%20(1)_page-0001%20(1).jpg?alt=media&token=f5d71ae5-03a0-4f24-9b81-cbc5addcff51',
             'diplomdrive': 'https://drive.google.com/file/d/1z78s-J59VR7KZzMuehTqvjUJUJkhAg2x/view',
           },
 
           {
-            'name': 'Curso de React.js',
+            'name': 'React.js course',
             'hours': 6,
             'certificationdate': 'Sep 11, 2019',
             'link': 'https://platzi.com/clases/pruebas-software/',
@@ -375,7 +375,7 @@ export const initialState = {
             'diplomdrive': 'https://drive.google.com/file/d/1z78s-J59VR7KZzMuehTqvjUJUJkhAg2x/view',
           },
           {
-            'name': 'Curso de HTML y CSS',
+            'name': 'HTML and CSS course',
             'hours': 6,
             'certificationdate': 'Jul 28, 2019',
             'link': 'https://platzi.com/clases/pruebas-software/',
@@ -384,7 +384,7 @@ export const initialState = {
             'diplomdrive': 'https://drive.google.com/file/d/1z78s-J59VR7KZzMuehTqvjUJUJkhAg2x/view',
           },
           {
-            'name': 'Curso Profesional de Git y GitHub',
+            'name': 'Git and GitHub Professional Course',
             'hours': 6,
             'certificationdate': 'Jul 12, 2019',
             'link': 'https://platzi.com/clases/pruebas-software/',
@@ -393,7 +393,7 @@ export const initialState = {
             'diplomdrive': 'https://drive.google.com/file/d/1z78s-J59VR7KZzMuehTqvjUJUJkhAg2x/view',
           },
           {
-            'name': 'Curso de Animaciones para la Web',
+            'name': 'Animations for the Web Course',
             'hours': 6,
             'certificationdate': 'Jul 9, 2019',
             'link': 'https://platzi.com/clases/pruebas-software/',
@@ -402,7 +402,7 @@ export const initialState = {
             'diplomdrive': 'https://drive.google.com/file/d/1z78s-J59VR7KZzMuehTqvjUJUJkhAg2x/view',
           },
           {
-            'name': 'Curso de Responsive Design',
+            'name': 'Responsive Design Course',
             'hours': 6,
             'certificationdate': 'May 23, 2019',
             'link': 'https://platzi.com/clases/pruebas-software/',
@@ -411,7 +411,7 @@ export const initialState = {
             'diplomdrive': 'https://drive.google.com/file/d/1z78s-J59VR7KZzMuehTqvjUJUJkhAg2x/view',
           },
           {
-            'name': 'Curso de CSS Grid Layout',
+            'name': 'CSS Grid Layout Course',
             'hours': 6,
             'certificationdate': 'Abr 19, 2019',
             'link': 'https://platzi.com/clases/pruebas-software/',
@@ -420,7 +420,7 @@ export const initialState = {
             'diplomdrive': 'https://drive.google.com/file/d/1z78s-J59VR7KZzMuehTqvjUJUJkhAg2x/view',
           },
           {
-            'name': 'Curso de Desarrollo Web Online',
+            'name': 'Online Web Development Course',
             'hours': 6,
             'certificationdate': 'Abr 7, 2019',
             'link': 'https://platzi.com/clases/pruebas-software/',
@@ -436,7 +436,7 @@ export const initialState = {
         'cover': 'https://firebasestorage.googleapis.com/v0/b/pepe-code.appspot.com/o/badges-Crecimiento.webp?alt=media&token=2ee2c643-3f55-49e7-85ca-1883ed78200c',
         'courses': [
           {
-            'name': 'Curso de Creación de Portafolio y CV',
+            'name': 'CV and Portfolio Creation Course',
             'hours': 6,
             'certificationdate': 'Abr 1, 2020',
             'link': 'https://platzi.com/clases/pruebas-software/',
@@ -445,7 +445,7 @@ export const initialState = {
             'diplomdrive': 'https://drive.google.com/file/d/1z78s-J59VR7KZzMuehTqvjUJUJkhAg2x/view',
           },
           {
-            'name': 'Curso para Desbloquear tu Creatividad',
+            'name': 'How to Unlock your Creativity Course',
             'hours': 6,
             'certificationdate': 'Jen 31, 2020',
             'link': 'https://platzi.com/clases/pruebas-software/',
@@ -454,7 +454,7 @@ export const initialState = {
             'diplomdrive': 'https://drive.google.com/file/d/1z78s-J59VR7KZzMuehTqvjUJUJkhAg2x/view',
           },
           {
-            'name': 'Curso de Técnicas de Formación Efectiva',
+            'name': 'Effective Training Techniques Course',
             'hours': 6,
             'certificationdate': 'Jen 31, 2020',
             'link': 'https://platzi.com/clases/pruebas-software/',
@@ -463,7 +463,7 @@ export const initialState = {
             'diplomdrive': 'https://drive.google.com/file/d/1z78s-J59VR7KZzMuehTqvjUJUJkhAg2x/view',
           },
           {
-            'name': 'Curso de Gestión Efectiva del Tiempo',
+            'name': 'Effective Time Management Course',
             'hours': 6,
             'certificationdate': 'Jen 31, 2020',
             'link': 'https://platzi.com/clases/pruebas-software/',
@@ -473,7 +473,7 @@ export const initialState = {
           },
 
           {
-            'name': 'Curso de Escritura en Inglés',
+            'name': 'English Writing Course',
             'hours': 6,
             'certificationdate': 'Jul 28, 2019',
             'link': 'https://platzi.com/clases/pruebas-software/',
@@ -482,7 +482,7 @@ export const initialState = {
             'diplomdrive': 'https://drive.google.com/file/d/1z78s-J59VR7KZzMuehTqvjUJUJkhAg2x/view',
           },
           {
-            'name': 'Curso de Inglés Práctico: Fundamentos',
+            'name': 'Practical English Course: Fundamentals',
             'hours': 6,
             'certificationdate': 'Jul 28, 2019',
             'link': 'https://platzi.com/clases/pruebas-software/',
@@ -491,7 +491,7 @@ export const initialState = {
             'diplomdrive': 'https://drive.google.com/file/d/1z78s-J59VR7KZzMuehTqvjUJUJkhAg2x/view',
           },
           {
-            'name': 'Curso de Inglés Básico: Conversación',
+            'name': 'Basic English Course: Conversation',
             'hours': 6,
             'certificationdate': 'Jul 27, 2019',
             'link': 'https://platzi.com/clases/pruebas-software/',
@@ -500,7 +500,7 @@ export const initialState = {
             'diplomdrive': 'https://drive.google.com/file/d/1z78s-J59VR7KZzMuehTqvjUJUJkhAg2x/view',
           },
           {
-            'name': 'Curso de Inglés Básico: Gramática',
+            'name': 'Basic English Course: Grammar',
             'hours': 6,
             'certificationdate': 'Jul 27, 2019',
             'link': 'https://platzi.com/clases/pruebas-software/',
@@ -509,7 +509,7 @@ export const initialState = {
             'diplomdrive': 'https://drive.google.com/file/d/1z78s-J59VR7KZzMuehTqvjUJUJkhAg2x/view',
           },
           {
-            'name': 'Curso de Inglés Básico: Fundamentos',
+            'name': 'Basic English Course: Fundamentals',
             'hours': 6,
             'certificationdate': 'Jul 27, 2019',
             'link': 'https://platzi.com/clases/pruebas-software/',
@@ -518,7 +518,7 @@ export const initialState = {
             'diplomdrive': 'https://drive.google.com/file/d/1z78s-J59VR7KZzMuehTqvjUJUJkhAg2x/view',
           },
           {
-            'name': 'Estrategias para Aprender en Línea Efectivamente',
+            'name': 'Strategies for Effective Online Learning',
             'hours': 6,
             'certificationdate': 'Jul 11, 2019',
             'link': 'https://platzi.com/clases/pruebas-software/',

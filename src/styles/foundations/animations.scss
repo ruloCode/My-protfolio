@@ -9,4 +9,15 @@
     opacity: 1;
   }
 }
+@keyframes littleJump {
+  0% {
+    transform: translateY(0%);
+  }
+  50% {
+    transform: translateY(1%);
+  }
+  100% {
+    transform: translateY(0%);
+  }
+}
 

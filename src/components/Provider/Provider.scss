@@ -14,21 +14,40 @@
   }
  
   .shape {
-    width: 230px;
+    width: 250px;
     position: absolute;
     @include applyTo('xs'){
-      width: 300px;
+      width: 350px;
     }
     @include applyTo('m'){
-      width: 400px;
+      width: 450px;
     }
   }
   .top-corner {
-    top: -1%;
+    top: -15%;
     left: -6%;
-   
+    z-index: 3;
+    animation: littleJump 5s infinite .5s;
+    @include applyTo('xs'){
+      top: -20%;
+    }
+    @include applyTo('m'){
+      top: -25%;
+    }
   }
-  
+  .shape.top-corner.shadow {
+    top: -14%;
+    z-index: 2;
+    animation: littleJump 6s infinite 1s;
+    opacity: 90%;
+    @include applyTo('xs'){
+      top: -19%;
+    }
+    @include applyTo('m'){
+      top: -24%;
+    }
+
+  }
   .social-media {
     position: absolute;
     z-index: 6;
