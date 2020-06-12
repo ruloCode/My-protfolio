@@ -1,3 +1,4 @@
+/* eslint-disable jsx-a11y/anchor-is-valid */
 /* eslint-disable jsx-a11y/no-static-element-interactions */
 import React, { useState } from 'react';
 import './Course.scss';
@@ -22,7 +23,7 @@ const Course = ({ course }) => {
         </dd>
 
         <Modal onClose={handleClose} isOpen={isOpen}>
-          <a rel='noopener noreferrer' target='_blank' href={course.diplomdrive}>
+          <a rel='noopener noreferrer' target='_blank' href='#'>
             <img src={course.diplom} alt='diplom' />
           </a>
 

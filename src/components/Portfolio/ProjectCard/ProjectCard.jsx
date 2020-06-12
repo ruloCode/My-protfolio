@@ -22,7 +22,6 @@ const ProjectCard = (props) => {
       </div>
       <div className='project-card__info'>
         <h3>{name}</h3>
-        <p>{description}</p>
       </div>
     </div>
   );

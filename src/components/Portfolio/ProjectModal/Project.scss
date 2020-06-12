@@ -40,7 +40,7 @@
   }
   .go-back {
     position: absolute;
-    top: 5%;
+    top: 2%;
     left: 5%;
     @include applyTo('m') {
       top: 0%;
@@ -51,7 +51,7 @@
   &__info {
     padding: 1em;
     background: $colorFontMain;
-    border-radius: 2em;
+    border-radius: 1em;
     color: white;
 
     .info-buttons {
@@ -84,6 +84,27 @@
       p {
         margin: .5em 0;
       }
+    }
+    .technologies {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      width: 80%;
+      margin: 0 auto;
+      .technology {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+        text-transform: capitalize;
+        margin: .7em 0;
+
+        img {
+          max-width: 40px;
+        }
+      }
+
     }
   }
 }
@@ -130,12 +151,23 @@
 }
 .glide__arrow {
   color: $colorFontMain;
+  position: absolute;
 }
-.glide__arrow--left {
-  left: -8%;
+.glide__arrow.glide__arrow--left {
+    left: 0%;
 }
-.glide__arrow--right {
-  right:  -8%;
+.glide__arrow.glide__arrow--right {
+    right: 0%;
+}
+.glide__arrow.glide__arrow--left {
+  @include applyTo('m') {
+    left: 10%;
+  }
+}
+.glide__arrow.glide__arrow--right {
+  @include applyTo('m') {
+    right: 10%;
+  }
 }
 .image-slide-container {
   height: 100%;

@@ -91,8 +91,9 @@ const Project = (props) => {
 
         <div className='project__info'>
           <div className='info-buttons'>
-            <a className='live' href={liveurl}>Go live</a>
-            <a className='code' href={repository}>
+            {liveurl && <a className='live' target='__blank' href={liveurl}>Go live</a>}
+
+            <a className='code' target='__blank' href={repository}>
               View code
               <i className='fab fa-github' />
             </a>
@@ -103,17 +104,18 @@ const Project = (props) => {
               {description}
             </p>
           </div>
-          <div className='technology'>
-            <h3> Technologies</h3>
-            <p>react</p>
-            {' '}
-            <p>react</p>
-            {' '}
-            <p>react</p>
-            {' '}
-            <p>react</p>
-            {' '}
-            <p>react</p>
+          <div className='technologies'>
+            {technologies.map((technology) => {
+              return (
+                <div className='technology'>
+                  <h4>{technology.name}</h4>
+                  <div className='technology__cover'>
+                    <img src={technology.icon} />
+                  </div>
+
+                </div>
+              );
+            })}
           </div>
         </div>
       </div>
