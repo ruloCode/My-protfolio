@@ -1,11 +1,14 @@
 export const initialState = {
-  user: null,
+  user: {
+    name: 'Andrés Santana',
+    cover: 'https://firebasestorage.googleapis.com/v0/b/pepe-code.appspot.com/o/perfilFinal-min.png?alt=media&token=78033d70-f675-492b-ad00-21eb9f808446',
+  },
   portfolio: [
     {
       name: 'kaizen',
       id: 1,
       preview: 'https://firebasestorage.googleapis.com/v0/b/pepe-code.appspot.com/o/login.png?alt=media&token=d59f92d1-dc0d-4b08-b653-510d6dde36c3',
-      description: 'Open source medical tests management system.',
+      description: 'Collaborative open source medical tests management system.',
       gallery: [
         {
           type: 'image',
@@ -57,6 +60,38 @@ export const initialState = {
         },
       ],
       repository: 'https://github.com/rulo-code/My-protfolio',
+      technologies: [
+        {
+          name: 'react',
+          icon: 'https://firebasestorage.googleapis.com/v0/b/pepe-code.appspot.com/o/react.png?alt=media&token=6f53f9b3-bdc7-43d6-af3c-16b189a522dd',
+        },
+        {
+          name: 'redux',
+          icon: 'https://firebasestorage.googleapis.com/v0/b/pepe-code.appspot.com/o/unnamed%20(1).png?alt=media&token=49a95bd6-3997-4d1c-8212-98803260d1d5',
+        },
+        {
+          name: 'react router',
+          icon: 'https://firebasestorage.googleapis.com/v0/b/pepe-code.appspot.com/o/react-router.svg?alt=media&token=a40cabf3-be3c-4faa-ab01-18dc34525991',
+        },
+        {
+          name: 'sass',
+          icon: 'https://firebasestorage.googleapis.com/v0/b/pepe-code.appspot.com/o/288_Sass-512.png?alt=media&token=aacd1590-a443-4e80-9842-54bafada6edd',
+        },
+      ],
+    },
+    {
+      name: 'Orion uber clone',
+      id: 2,
+      preview: 'https://firebasestorage.googleapis.com/v0/b/pepe-code.appspot.com/o/orion.png?alt=media&token=47c5d9a5-8f61-44e6-8059-96ad38a62069',
+      description: 'Collaborative project developed in the JavaScript School with Google maps API',
+      gallery: [
+        {
+          type: 'image',
+          url: 'https://firebasestorage.googleapis.com/v0/b/pepe-code.appspot.com/o/orion.png?alt=media&token=47c5d9a5-8f61-44e6-8059-96ad38a62069',
+        },
+      ],
+      repository: 'https://github.com/rulo-code/Orion-clonUber',
+      liveurl: 'https://orion-uber-clone.now.sh',
       technologies: [
         {
           name: 'react',

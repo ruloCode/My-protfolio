@@ -1,16 +1,15 @@
 /* eslint-disable react/jsx-indent */
 import React from 'react';
-import { withRouter, Redirect } from 'react-router-dom';
+import { withRouter } from 'react-router-dom';
 
 import { useDispatch } from 'react-redux';
 
 import { setProject } from '../../../redux/user/user.actions';
 import './ProjectCard.scss';
-import { helloWorld } from '../../../routes/paths';
 
 const ProjectCard = (props) => {
   const dispatch = useDispatch();
-  const { name, description, preview, id } = props;
+  const { name, preview, id } = props;
   const onClick = () => {
     dispatch(setProject({ project: props }));
     props.history.push(`./project/${id}`);

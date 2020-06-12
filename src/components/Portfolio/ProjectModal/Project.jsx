@@ -1,13 +1,11 @@
 /* eslint-disable jsx-a11y/anchor-is-valid */
 /* eslint-disable jsx-a11y/control-has-associated-label */
-import { withRouter, Redirect } from 'react-router-dom';
+import { withRouter, Link } from 'react-router-dom';
 
 import React, { useEffect } from 'react';
 import Glide from '@glidejs/glide';
-import { Link } from 'react-router-dom';
 import './Project.scss';
 import { useSelector } from 'react-redux';
-import Kaizen from '../../../assets/kaizen.png';
 
 const Project = (props) => {
   const project = useSelector((state) => state.user.project);
@@ -18,7 +16,7 @@ const Project = (props) => {
     liveurl,
     repository,
     technologies,
-    id,
+    logo,
   } = project;
 
   useEffect(() => {
@@ -82,9 +80,12 @@ const Project = (props) => {
           <Link className='go-back' to='/portfolio'>
             <i className='fas fa-angle-double-left' />
           </Link>
-          <div className='project-cover'>
-            <img src={Kaizen} alt='logo-kaizen' />
-          </div>
+          {logo && (
+            <div className='project-cover'>
+              <img src={logo} alt='logo-kaizen' />
+            </div>
+          ) }
+
           <h2>{name}</h2>
 
         </div>

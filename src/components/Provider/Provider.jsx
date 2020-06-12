@@ -1,7 +1,6 @@
 /* eslint-disable jsx-a11y/label-has-associated-control */
 import React from 'react';
 import { withRouter } from 'react-router-dom';
-import Shape2 from '../../assets/shape2.png';
 import cv from '../../cv';
 import ContactContainer from './ContactContainer/ContactContainer';
 import VectorBlue from '../../assets/Vector-blue.png';
