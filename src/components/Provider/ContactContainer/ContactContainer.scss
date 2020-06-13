@@ -14,6 +14,8 @@
     margin-left: .5em;
     color: $colorLigthBlue;
     transition: .3s;
+    cursor: pointer;
+
   }
   .toggle.colapse {
     transform: rotate(180deg);
