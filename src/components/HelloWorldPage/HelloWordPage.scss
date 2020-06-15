@@ -2,7 +2,6 @@
 
 .hello-world {
   display: grid;
-
   grid-gap: 1em;
   animation: fadein 1.5s;
   margin-top: 2em;
@@ -40,7 +39,6 @@
       dd {
         margin-top: .5em;
       }
-      
     }
     .image-container:hover {
       img {

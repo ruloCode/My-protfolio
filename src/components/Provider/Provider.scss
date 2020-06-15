@@ -24,7 +24,7 @@
     }
   }
   .top-corner {
-    top: -15%;
+    top: -4em;
     left: -6%;
     z-index: 3;
     animation: littleJump 5s infinite .5s;
@@ -35,19 +35,7 @@
       top: -25%;
     }
   }
-  .shape.top-corner.shadow {
-    top: -14%;
-    z-index: 2;
-    animation: littleJump 6s infinite 1s;
-    opacity: 90%;
-    @include applyTo('xs'){
-      top: -19%;
-    }
-    @include applyTo('m'){
-      top: -24%;
-    }
-
-  }
+ 
   .social-media {
     position: absolute;
     z-index: 6;

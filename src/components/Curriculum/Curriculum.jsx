@@ -1,7 +1,7 @@
 import React from 'react';
 import './Curriculum.scss';
 import { Link } from 'react-router-dom';
-import { useSelector} from 'react-redux';
+import { useSelector } from 'react-redux';
 
 import Experience from './Experience/Experience';
 import Education from './Education/Education';
@@ -13,7 +13,7 @@ import Provider from '../Provider/Provider';
 const Curriculum = () => {
   const cv = useSelector((state) => state.user.cv);
 
-  const { profesionalProfile, experience, education, phone, email, location } = cv;
+  const { profesionalProfile, experience, education, phone, email, location, softwareskills } = cv;
   return (
     <Provider>
       <div className='curriculumn'>
@@ -21,7 +21,7 @@ const Curriculum = () => {
           <i className='fas fa-angle-double-left' />
         </Link>
         <NameContainer cv={cv} />
-        <ProfileContainer phone={phone} email={email} location={location} />
+        <ProfileContainer phone={phone} email={email} location={location} skills={softwareskills} />
         <div className='curriculumn__cv-container'>
           <ProfessionalProfile profesionalProfile={profesionalProfile} />
           <Experience experience={experience} />

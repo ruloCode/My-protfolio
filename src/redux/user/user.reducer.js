@@ -121,13 +121,31 @@ export const initialState = {
     'lenguajes': [
       'english', 'spanish',
     ],
-    'softwareSkills': [
-      'React.js',
-      'HTML',
-      'CSS',
-      'Vanilla.js',
-      'Adobe XD',
-      'Figma',
+    'softwareskills': [
+      {
+        name: 'React.js',
+        logo: 'https://firebasestorage.googleapis.com/v0/b/pepe-code.appspot.com/o/react%20(1).png?alt=media&token=7b879e88-bab7-4c40-ae67-35818773cec3',
+      },
+      {
+        name: 'HTML',
+        logo: 'https://firebasestorage.googleapis.com/v0/b/pepe-code.appspot.com/o/html-5%20(1).png?alt=media&token=d946e277-3302-4f78-9ab5-6192f6c5a4c7',
+      },
+      {
+        name: 'Sass',
+        logo: 'https://firebasestorage.googleapis.com/v0/b/pepe-code.appspot.com/o/sass.png?alt=media&token=14e10019-456c-4a0f-8661-b780d983f29b',
+      },
+      {
+        name: 'JavaScript',
+        logo: 'https://firebasestorage.googleapis.com/v0/b/pepe-code.appspot.com/o/480px-Unofficial_JavaScript_logo_2.svg.png?alt=media&token=a2ba5a81-1209-402e-8e03-691c0d11f6b2',
+      },
+      {
+        name: 'Figma',
+        logo: 'https://firebasestorage.googleapis.com/v0/b/pepe-code.appspot.com/o/figma-682083.png?alt=media&token=fce41b60-0bc1-4de1-a16f-d0faa10a0dcc',
+      },
+      {
+        name: 'CSS3',
+        logo: 'https://firebasestorage.googleapis.com/v0/b/pepe-code.appspot.com/o/css-3-logo-png-7.png?alt=media&token=6b630635-9cf5-4876-b269-fbd6354037ba',
+      },
     ],
     'profesionalProfile': 'I am interested in get further, as a front end web developer I be able to build creative solves and maintaining websites using the best practices in the scope. Passionate about team working and Identifying innovative ideas according to project requirements proficient in technologies like HTML, CSS, JavaScript, Jest plus modern libraries and frameworks like React',
     'experience': [

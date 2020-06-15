@@ -4,7 +4,6 @@ import { withRouter } from 'react-router-dom';
 import cv from '../../cv';
 import ContactContainer from './ContactContainer/ContactContainer';
 import VectorBlue from '../../assets/Vector-blue.png';
-import Shadow from '../../assets/shadow.png';
 import './Provider.scss';
 
 const Provider = (props) => {
@@ -36,7 +35,6 @@ const Provider = (props) => {
         </a>
       </div>
       <img className='shape top-corner' src={VectorBlue} alt='shapeImage' />
-      <img className='shape top-corner shadow' src={Shadow} alt='shapeImage' />
       {children}
       <ContactContainer isOpen={renderPath()} cv={cv} />
 
