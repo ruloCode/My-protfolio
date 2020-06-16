@@ -29,10 +29,10 @@
     z-index: 3;
     animation: littleJump 5s infinite .5s;
     @include applyTo('xs'){
-      top: -20%;
+      top: -5em;
     }
     @include applyTo('m'){
-      top: -25%;
+      top: -8em;
     }
   }
  

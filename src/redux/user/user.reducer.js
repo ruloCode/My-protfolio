@@ -147,7 +147,7 @@ export const initialState = {
         logo: 'https://firebasestorage.googleapis.com/v0/b/pepe-code.appspot.com/o/css-3-logo-png-7.png?alt=media&token=6b630635-9cf5-4876-b269-fbd6354037ba',
       },
     ],
-    'profesionalProfile': 'I am interested in get further, as a front end web developer I be able to build creative solves and maintaining websites using the best practices in the scope. Passionate about team working and Identifying innovative ideas according to project requirements proficient in technologies like HTML, CSS, JavaScript, Jest plus modern libraries and frameworks like React',
+    'profesionalProfile': 'I am interested in getting further, as a front end web developer I be able to build creative solves and maintaining websites using the best practices in the scope. Passionate about team working and Identifying innovative ideas according to project requirements proficient in technologies like HTML, CSS, JavaScript, Jest plus modern libraries and frameworks like React',
     'experience': [
       {
         'company': 'Platzi Master',

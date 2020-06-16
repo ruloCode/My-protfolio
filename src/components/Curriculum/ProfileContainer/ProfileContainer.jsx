@@ -20,7 +20,7 @@ const ProfileContainer = () => {
           <ContactInfo label='Location' value={location} />
         </div>
         <div className='lenguajes'>
-          <h3>Lenguajes</h3>
+          <h3>Languajes</h3>
           <dd>English</dd>
           <dd>Spanish</dd>
         </div>

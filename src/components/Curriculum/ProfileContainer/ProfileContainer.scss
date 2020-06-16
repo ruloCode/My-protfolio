@@ -11,8 +11,10 @@
   }
   .lenguajes {
     text-align: center;
-    padding: .5em;
     border-bottom: 2px solid rgba(255, 255, 255, 0.575);
+    dd {
+      padding: .5em;
+    }
   }
   
   .contact-container {
