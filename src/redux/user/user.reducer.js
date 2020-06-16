@@ -89,6 +89,10 @@ export const initialState = {
           type: 'image',
           url: 'https://firebasestorage.googleapis.com/v0/b/pepe-code.appspot.com/o/orion.png?alt=media&token=47c5d9a5-8f61-44e6-8059-96ad38a62069',
         },
+        {
+          type: 'image',
+          url: 'https://firebasestorage.googleapis.com/v0/b/pepe-code.appspot.com/o/orion2.png?alt=media&token=20976304-0700-45fc-b321-a87e5261d958',
+        },
       ],
       repository: 'https://github.com/rulo-code/Orion-clonUber',
       liveurl: 'https://orion-uber-clone.now.sh',
