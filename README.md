@@ -34,10 +34,6 @@ Executing to build
 ```
 npm build
 ```
-Executing to test
-```
-npm test
-```
 
 ### License
 
