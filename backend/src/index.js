@@ -1,12 +1,13 @@
-const { ApolloServer } = require('apollo-server')
-const { config } = require('./config/index')
+const express = require('express')
+const app = express();
+const cors = require('cors')
+
+const { ApolloServer } = require('apollo-server-express')
+const { config: {port, dbUri} } = require('./config/index')
 
 const db = require('./mongoDB')
-const typeDefs = require('./graphql/typeDefs')
+const typeDefs = require('./graphql/typeDefs/index')
 const resolvers = require('./graphql/resolvers/index')
-
-
-
 
 // Apollo server
 
@@ -15,14 +16,21 @@ const server = new ApolloServer({
   resolvers,
   context:  ({req})=>({req})
 })
+server.applyMiddleware({app})
+app.disable('x-powered-by')
+app.use(cors());
 
 const runServer = async ()=>{
-  await db(config.dbUri)
-  const serverResponse = await server.listen({ port: config.port})
-  console.log(`Server running at ${serverResponse.url}`)
+  try {
+    await db(dbUri)
+    app.listen({ port }, ()=> {
+      console.log(`http://localhost:${port}${server.graphqlPath}`)
+    })
+  } catch (error) {
+    throw new Error(error)
+  }
 }
 runServer();
-
 
 
 

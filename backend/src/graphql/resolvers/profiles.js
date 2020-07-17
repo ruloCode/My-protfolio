@@ -2,11 +2,10 @@ const path = require('path')
 
 const Profile = require('../../models/Profile')
 const checkAuth = require('../../util/check-auth')
-const { AuthenticationError, UserInputError } = require('apollo-server')
+const { AuthenticationError, UserInputError } = require('apollo-server-express')
 const cloudinary = require('cloudinary')
 
-
-module.exports = {
+const resolvers = {
   Query: {
     me: () => {
       return {
@@ -36,30 +35,6 @@ module.exports = {
     }
   },
   Mutation: {
-    async uploadImage(_, { profileId, filename }, context){
-      const { username } = checkAuth(context)
-      if(!username){
-        throw new Error('Not authenticated')
-      }
-      const mainDir = path.dirname(require.main.filename)
-      // full path name file
-      filename = `${mainDir}/uploads/${filename}`
-      try {
-        // upload image
-        const photo = await cloudinary.v2.uploader.upload(filename)
-        // upload course
-        const profile = await Profile.findById(profileId);
-
-        if(profile){
-          // added to the top of array
-          profile.profileCover = `${photo.public_id}.${photo.format}`
-          await profile.save()
-          return profile.profileCover
-        }
-      } catch (error) {
-        throw new Error(error)
-      }
-    },
     async createProfile(_, { profileInput: {
       slogan,
       profileCover,
@@ -68,7 +43,6 @@ module.exports = {
       phone,
       location,
       } }, context){
-       
       // check jwt
       const {username} = checkAuth(context)
 
@@ -246,3 +220,4 @@ module.exports = {
     }
   }
 }
+module.exports = resolvers;

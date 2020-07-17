@@ -1,7 +1,8 @@
 const Course = require('../../models/Course')
 const checkAuth = require('../../util/check-auth')
-const { UserInputError, AuthenticationError } = require('apollo-server')
-module.exports = {
+const { UserInputError, AuthenticationError } = require('apollo-server-server-express')
+
+const resolvers = {
   Mutation: {
     async createComment(_, {courseId, body}, context){
         const { username } = checkAuth(context);
@@ -47,3 +48,4 @@ module.exports = {
     }
   }
 }
+module.exports = resolvers

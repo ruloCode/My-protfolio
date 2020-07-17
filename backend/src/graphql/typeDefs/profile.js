@@ -1,13 +1,5 @@
-const { gql } = require('apollo-server')
-
+const { gql } = require('apollo-server-express')
 module.exports = gql`
-
-type Course {
-  id: ID!
-  coursename: String!
-  iconurl: String!
-  createdAt: String!
-}
 type SoftSkill{
   id: ID!
   username: String!
@@ -27,7 +19,6 @@ type Languaje{
   name: String!
   username: String!
   createdAt: String!
-
 }
 type Profile {
   id: ID!
@@ -53,51 +44,14 @@ input ProfileInput {
   phone: String!
   location: String!
 }
-type User {
-  id: ID!
-  email: String!
-  token: String!
-  username: String!
-  createdAt: String!
-}
-type RandomText {
-  name: String!
-}
-type Query {
-  getCourses: [Course]
-  getCourse(courseId: ID!):Course
+extend type Query {
   getProfile(profileId: ID!):Profile
   getProfiles: [Profile]
-  me: RandomText
 }
-
-input RegisterInput {
-  username: String!
-  password: String!
-  confirmPassword: String!
-  email: String!
-}
-type File {
-  id: ID!
-  path: String!
-  filename: String!
-  mimetype: String!
-  encoding: String!
-}
-scalar CloudinaryOptions
-
-type Mutation {
-
-  uploadImage( profileId: ID!,filename: String!): String!
-
-  register(registerInput: RegisterInput): User!
-  login(username: String!, password: String!): User!
+extend type Mutation {
 
   createProfile(profileInput: ProfileInput): Profile!
   deleteProfile(profileId: ID!): String!
-
-  createCourse(coursename: String!, iconurl: String!): Course!
-  deleteCourse(courseId: ID!): String!
 
   createLanguaje(profileId: ID!, name: String!): Profile!
   deleteLanguaje(profileId: ID!, languajeId: ID!): Profile!
@@ -107,8 +61,5 @@ type Mutation {
 
   createSocialMedia(profileId: ID!, name: String!, url: String!):Profile!
   deleteSocialMedia(profileId: ID!, socialMediaId: ID!): Profile!
-
-
 }
-
-`
+`;

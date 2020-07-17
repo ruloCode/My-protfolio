@@ -1,9 +1,8 @@
 const Course = require('../../models/Course')
 const checkAuth = require('../../util/check-auth')
-const { AuthenticationError } = require('apollo-server')
+const { AuthenticationError } = require('apollo-server-express');
 
-
-module.exports = {
+const resolvers = {
   Query: {
     async getCourses(){
       try {
@@ -64,3 +63,4 @@ module.exports = {
     }
   }
 }
+module.exports = resolvers

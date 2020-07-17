@@ -1,10 +1,13 @@
 const bcrypt = require('bcryptjs');
 const jwt = require('jsonwebtoken');
-const { UserInputError } = require('apollo-server');
+const { UserInputError } = require('apollo-server-express');
 
 const { validateRegisterInput, validateLoginInput } = require('../../util/validators')
 const { config: { secretKey }} = require('../../config/index')
 const User = require('../../models/User')
+const { users, cars} = require('./data')
+
+
 
 function generateToken(user){
   return jwt.sign({
@@ -14,8 +17,21 @@ function generateToken(user){
   },
   secretKey, { expiresIn: '1h'});
 }
-module.exports = {
+const resolvers = {
+  Query: {
+    users: () => users,
+    cars: () => cars,
+  },
+  Car: {
+    owner: (parent) => users[parent.ownedBy -1]
+  },
+  MyUser: {
+    car: (parent) => {
+      return parent.cars.map((carId)=> cars[carId - 1])
+    }
+  },
   Mutation: {
+
     async login(_, { username, password }){
       const {errors, valid } = validateLoginInput(username, password);
       // Validate data
@@ -85,3 +101,4 @@ module.exports = {
     }
   }
 }
+module.exports = resolvers;
