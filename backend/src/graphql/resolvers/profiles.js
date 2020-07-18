@@ -1,9 +1,16 @@
 const path = require('path')
-
+const { config: {cloudName, apiKey, apiSecret}} = require('../../config/index')
 const Profile = require('../../models/Profile')
 const checkAuth = require('../../util/check-auth')
 const { AuthenticationError, UserInputError } = require('apollo-server-express')
 const cloudinary = require('cloudinary')
+const { GraphQLScalarType } = require('graphql')
+
+cloudinary.config({
+  cloud_name: cloudName,
+  api_key: apiKey,
+  api_secret: apiSecret,
+})
 
 const resolvers = {
   Query: {
@@ -12,7 +19,7 @@ const resolvers = {
         name: 'Andres'
       }
     },
-    async getProfiles(){
+    getProfiles: async ()=>{
       try {
         // sort by created date
         const profiles = await Profile.find();
@@ -21,7 +28,8 @@ const resolvers = {
         throw new Error(err)
       }
     },
-    async getProfile(_, { profileId }){
+    
+    getProfile: async (_, { profileId })=>{
       try {
         const profile = await Profile.findById(profileId);
         if(profile){
@@ -34,15 +42,57 @@ const resolvers = {
       }
     }
   },
+  Profile: {
+    profileCover: (parent, { options })=>{
+      console.log(options)
+      // create full url
+      let url = cloudinary.url(parent.profileCover)
+      if (options) {
+        // with: Int, q_auto: Boolean, f_auto: Boolean, face: 'face'
+        const [ width, q_auto, f_auto, face ] = options;
+        const cloudinaryOptions = {
+          ...(q_auto === 'true' && { quality: 'auto'}),
+          ...(f_auto === 'true' && {fetch_format: 'auto'}),
+          ...(face && {crop: 'thumb', gravity: 'face'}),
+          width,
+          secure: true,
+        };
+        url = cloudinary.url(parent.profileCover, cloudinaryOptions)
+        return url
+      }
+      return url;
+    }
+  },
   Mutation: {
-    async createProfile(_, { profileInput: {
+    uploadImage: async (parent, { profileId, filename }, context) => {
+      const {username} = checkAuth(context)
+      if(!username){
+        throw new Error('Not allowed')
+      }
+      // get de main path exec
+      const mainDir = path.dirname(require.main.filename)
+      filename = `${mainDir}/uploads/${filename}`
+      // uplaod image require a full path of image
+      try {
+        const photo = await cloudinary.v2.uploader.upload(filename)
+        // update profileCover
+        const profile = await Profile.findById(profileId)
+        profile.profileCover = `${photo.public_id}.${photo.format}`
+        profile.save()
+        return profile.profileCover
+      } catch (error) {
+        throw new Error(error)
+      }
+
+    },
+    createProfile: async (_, { profileInput: {
       slogan,
       profileCover,
       professionalProfile,
       email,
       phone,
       location,
-      } }, context){
+      } }, context)=>{
       // check jwt
       const {username} = checkAuth(context)
 
@@ -62,7 +112,7 @@ const resolvers = {
       return profile
 
     },
-    async deleteProfile(_, { profileId }, context){
+    deleteProfile: async (_, { profileId }, context)=>{
       const user = checkAuth(context)
       try{
         const profile = await Profile.findById(profileId);
@@ -76,7 +126,7 @@ const resolvers = {
         throw new Error(err)
       }
     },
-    async createLanguaje(_, {profileId, name}, context){
+    createLanguaje: async (_, {profileId, name}, context)=>{
       const { username } = checkAuth(context);
       if(name.trim() === '') {
         throw new UserInputError('Empty comment', {
@@ -100,7 +150,7 @@ const resolvers = {
         throw new UserInputError('Profile Not found')
       }
     },
-    async deleteLanguaje(_, { profileId, languajeId }, context){
+    deleteLanguaje: async (_, { profileId, languajeId }, context)=>{
       const { username } = checkAuth( context )
       const profile = await Profile.findById(profileId)
 
@@ -118,7 +168,7 @@ const resolvers = {
         throw new UserInputError('Profile not found')
       }
     },
-    async createSoftSkill(_, {profileId, name, iconUrl}, context){
+    createSoftSkill: async (_, {profileId, name, iconUrl}, context)=>{
       const { username } = checkAuth(context);
       if(name.trim() === '') {
         throw new UserInputError('Empty comment', {
@@ -150,7 +200,7 @@ const resolvers = {
         throw new UserInputError('Profile Not found')
       }
     },
-    async deleteSoftSkill(_, { profileId, softSkillId }, context){
+    deleteSoftSkill: async (_, { profileId, softSkillId }, context)=>{
       const { username } = checkAuth( context )
       const profile = await Profile.findById(profileId)
 
@@ -168,7 +218,7 @@ const resolvers = {
         throw new UserInputError('Profile not found')
       }
     },
-    async createSocialMedia(_, {profileId, name, url}, context){
+    createSocialMedia: async (_, {profileId, name, url}, context)=>{
       const { username } = checkAuth(context);
       if(name.trim() === '') {
         throw new UserInputError('Empty comment', {
@@ -200,7 +250,7 @@ const resolvers = {
         throw new UserInputError('Profile Not found')
       }
     },
-    async deleteSocialMedia(_, { profileId, socialMediaId }, context){
+    deleteSocialMedia: async (_, { profileId, socialMediaId }, context)=>{
       const { username } = checkAuth( context )
       const profile = await Profile.findById(profileId)
 
@@ -218,6 +268,18 @@ const resolvers = {
         throw new UserInputError('Profile not found')
       }
     }
-  }
+  },
+  CloudinaryOptions: new GraphQLScalarType({
+    name: 'CloudinaryOptions',
+    parseValue(value){
+      return value
+    },
+    serialize(value){
+      return value
+    },
+    parseLiteral(ast){
+      return ast.value.split(',')
+    }
+  })
 }
 module.exports = resolvers;

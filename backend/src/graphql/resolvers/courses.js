@@ -4,7 +4,7 @@ const { AuthenticationError } = require('apollo-server-express');
 
 const resolvers = {
   Query: {
-    async getCourses(){
+    getCourses: async ()=>{
       try {
         // sort by created date
         const courses = await Course.find().sort({ createdAt: -1});
@@ -13,7 +13,7 @@ const resolvers = {
         throw new Error(err)
       }
     },
-    async getCourse(_, { courseId }){
+    getCourse: async (_, { courseId })=>{
       try {
         const course = await Course.findById(courseId);
         if(course){
@@ -27,7 +27,7 @@ const resolvers = {
     }
   },
   Mutation: {
-    async createCourse(_, { coursename, iconurl }, context){
+    createCourse: async (_, { coursename, iconurl }, context)=>{
       // check jwt
       const user = checkAuth(context)
       console.log(user)
@@ -46,7 +46,7 @@ const resolvers = {
       return course
 
     },
-    async deleteCourse(_, { courseId }, context){
+    deleteCourse: async (_, { courseId }, context)=>{
       const user = checkAuth(context)
       // delete own courses
       try{

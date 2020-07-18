@@ -1,6 +1,9 @@
 require('dotenv').config();
 
 const config = {
+  cloudName: process.env.CLOUD_NAME,
+  apiKey: process.env.API_KEY,
+  apiSecret: process.env.API_SECRET,
   secretKey: process.env.SECRET_KEY,
   dev: process.env.NODE_ENV !== 'production',
   port: process.env.PORT || 5000,

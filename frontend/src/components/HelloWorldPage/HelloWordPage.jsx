@@ -16,7 +16,6 @@ const FETCH_PROFILE_QUERY = gql`
       id
       username
       professionalProfile
-      email
       phone
       location
       languajes{
@@ -37,7 +36,7 @@ const HelloWorld = () => {
   if (loading) return 'Loading';
   if (error) return 'Error!';
   const { getProfiles } = data;
-  const { professionalProfile, profileCover, email , slogan } = getProfiles[0];
+  const { professionalProfile, profileCover, slogan } = getProfiles[0];
   console.log(professionalProfile);
   return (
     <Provider>

@@ -4,4 +4,5 @@ export const helloWorld = () => '/';
 export const curriculum = () => '/curriculum';
 export const portfolio = () => '/portfolio';
 export const login = () => '/login';
+export const upload = () => '/upload';
 export const project = () => '/project/:id';

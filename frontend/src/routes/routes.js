@@ -4,6 +4,7 @@ import NotFound from '../components/Notfound/NotFound';
 import Curriculum from '../components/Curriculum/Curriculum';
 import Project from '../components/Portfolio/ProjectModal/Project';
 import Login from '../components/Login/Login';
+import Upload from '../components/Upload/Upload';
 
 import {
   helloWorld,
@@ -11,12 +12,18 @@ import {
   portfolio,
   project,
   login,
+  upload,
 } from './paths';
 
 export default [
   {
     path: login(),
     component: Login,
+    exact: true,
+  },
+  {
+    path: upload(),
+    component: Upload,
     exact: true,
   },
   {

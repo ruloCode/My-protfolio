@@ -1,18 +1,13 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import './Portfolio.scss';
 import { Link } from 'react-router-dom';
-import { useSelector, useDispatch } from 'react-redux';
+import { useSelector } from 'react-redux';
 
 import ProjectCard from './ProjectCard/ProjectCard';
 import Provider from '../Provider/Provider';
 import Crane from '../../assets/crane.png';
-import { setProject } from '../../redux/user/user.actions';
 
 const Portfolio = ({ children }) => {
-  const dispatch = useDispatch();
-  useEffect(() => {
-    dispatch(setProject({ project: null }));
-  }, []);
   const portfolio = useSelector((state) => state.user.portfolio);
 
   return (

@@ -111,7 +111,7 @@ const Project = (props) => {
                 <div className='technology'>
                   <h4>{technology.name}</h4>
                   <div className='technology__cover'>
-                    <img src={technology.icon} />
+                    <img src={technology.icon} alt='techicon' />
                   </div>
 
                 </div>

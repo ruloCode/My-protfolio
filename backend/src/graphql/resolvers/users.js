@@ -32,7 +32,7 @@ const resolvers = {
   },
   Mutation: {
 
-    async login(_, { username, password }){
+    login: async (_, { username, password })=>{
       const {errors, valid } = validateLoginInput(username, password);
       // Validate data
       if(!valid){
@@ -60,10 +60,10 @@ const resolvers = {
       }
 
     },
-    async register(
+    register: async(
       _,
       { registerInput: {username, email, password, confirmPassword}}
-      ){
+      ) => {
       // Validate user data
       const { valid, errors } = validateRegisterInput(username, email, password, confirmPassword)
       if (!valid){

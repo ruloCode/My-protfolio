@@ -1,5 +1,24 @@
 const { gql } = require('apollo-server-express')
 module.exports = gql`
+extend type Query {
+  getProfile(profileId: ID!):Profile
+  getProfiles: [Profile]
+}
+extend type Mutation {
+  uploadImage(profileId: ID!, filename: String!): String!
+
+  createProfile(profileInput: ProfileInput): Profile!
+  deleteProfile(profileId: ID!): String!
+
+  createLanguaje(profileId: ID!, name: String!): Profile!
+  deleteLanguaje(profileId: ID!, languajeId: ID!): Profile!
+
+  createSoftSkill(profileId: ID!, name: String!, iconUrl: String!): Profile!
+  deleteSoftSkill(profileId: ID!, softSkillId: ID!): Profile!
+
+  createSocialMedia(profileId: ID!, name: String!, url: String!):Profile!
+  deleteSocialMedia(profileId: ID!, socialMediaId: ID!): Profile!
+}
 type SoftSkill{
   id: ID!
   username: String!
@@ -23,7 +42,7 @@ type Languaje{
 type Profile {
   id: ID!
   slogan: String!
-  profileCover: String!
+  profileCover(options: CloudinaryOptions): String
   professionalProfile: String!
   email: String!
   phone: String!
@@ -44,22 +63,6 @@ input ProfileInput {
   phone: String!
   location: String!
 }
-extend type Query {
-  getProfile(profileId: ID!):Profile
-  getProfiles: [Profile]
-}
-extend type Mutation {
 
-  createProfile(profileInput: ProfileInput): Profile!
-  deleteProfile(profileId: ID!): String!
-
-  createLanguaje(profileId: ID!, name: String!): Profile!
-  deleteLanguaje(profileId: ID!, languajeId: ID!): Profile!
-
-  createSoftSkill(profileId: ID!, name: String!, iconUrl: String!): Profile!
-  deleteSoftSkill(profileId: ID!, softSkillId: ID!): Profile!
-
-  createSocialMedia(profileId: ID!, name: String!, url: String!):Profile!
-  deleteSocialMedia(profileId: ID!, socialMediaId: ID!): Profile!
-}
+scalar CloudinaryOptions
 `;

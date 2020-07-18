@@ -10,7 +10,7 @@ import App from '../routes/App';
 
 // To resolve problems with JWT autentication
 const httLink = createHttpLink({
-  uri: 'http://localhost:5000/',
+  uri: 'http://localhost:5000/graphql',
 });
 
 // create client
