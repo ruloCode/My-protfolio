@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<body>
+
+	<!-- Equation card -->
+    <div id="equation" style="font-size:100px;text-align: center;">$$$$</div>
+
+    <script type="module">
+        import MathLive from 'https://unpkg.com/mathlive/dist/mathlive.mjs';
+		
+		// User LaTeX
+        var LaTeX = "\\int_{#1}^{#2}#3\\ d{#4}"
+
+        // User params 
+        var params = ["a", "b", "f(x)", "x"]
+
+        // Transform LaTeX
+        LaTeX = LaTeX.replace(/#(\d+)/g, '☺$1')
+
+        // Get HTML element
+        var HTMLElement = MathLive.latexToMarkup(LaTeX);
+
+        // Tranform params
+        for (var i in params) {
+		    HTMLElement = HTMLElement.replace(
+		    	new RegExp(">☺(" + (parseInt(i) + 1) +")<", "g"), 
+		    		' id="param$1"><div>' + params[i] + '</div><')
+		}
+
+        // Add LaTeX
+        var child = document.createElement("div");   
+        child.innerHTML= HTMLElement;
+        document.getElementById("equation").appendChild(child);
+
+		// Render element
+        MathLive.renderMathInElement('equation');
+
+        // Style params
+        for (var i in params) {
+        	MathLive.makeMathField("param" + (parseInt(i) + 1), {defaultMode: "math"});
+		    var p = document.getElementById("param" + (parseInt(i) + 1));
+			p.style.color = "#000000";
+			p.onmouseover = function(){this.style.color = "#03bcba";};
+			p.onmouseout = function(){this.style.color = "#000000";};
+		}
+
+        console.log(HTMLElement)
+        
+    </script>
+    <style>
+		.ML__fieldcontainer {
+		    display: inline;
+		}
+	</style>
+</body>
+</html>	

@@ -44,7 +44,6 @@ const resolvers = {
   },
   Profile: {
     profileCover: (parent, { options })=>{
-      console.log(options)
       // create full url
       let url = cloudinary.url(parent.profileCover)
       if (options) {

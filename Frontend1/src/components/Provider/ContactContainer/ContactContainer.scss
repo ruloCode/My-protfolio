@@ -1,0 +1,29 @@
+@import '../../../styles/index.scss';
+
+.contact {
+  position: absolute;
+  top: 3%;
+  right: 3%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  box-shadow: 6px 6px 26px -17px rgba(0,0,0,0.75);
+  border-radius: 2em;
+  z-index: 5;
+  .toggle {
+    margin-left: .5em;
+    color: $colorLigthBlue;
+    transition: .3s;
+    cursor: pointer;
+
+  }
+  .toggle.colapse {
+    transform: rotate(180deg);
+    color: $colorWarning;
+  }
+}
+.contact.hidden {
+  @include applyTo('m'){
+    display: none;
+  }
+}

@@ -1,0 +1,114 @@
+@import '../../styles/index.scss';
+
+.hello-world {
+  display: grid;
+  grid-gap: 1em;
+  animation: fadein 1.5s;
+  margin-top: 2em;
+  &__title {
+    font-family: $fontFamilySecond;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  &__profile {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: 'photo photo'
+                         'cv pt';
+    align-items: center;
+    justify-content: center;
+     .profile-icon {
+      width:40px;
+      height: 40px;
+      position: relative;
+      z-index: 5;
+      transition: .3s;
+    }
+    .profile-cover {
+      grid-area: photo;
+      width: 70%;
+      margin: 0 auto;
+    }
+    
+    .image-container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      dd {
+        margin-top: .5em;
+      }
+    }
+    .image-container:hover {
+      img {
+        transform: scale(1.2);
+      }
+      dd {
+        margin-top: .5em;
+      }
+      
+    }
+    
+  }
+  &__description {
+    padding: .5em;
+    background: $colorLigthgrey;
+    border-radius: .5em;
+    text-align: center;
+    font-family: 'Lexend Tera', sans-serif;
+    box-shadow: 6px 6px 26px -17px rgba(0,0,0,0.75);
+    span{
+      font-weight: bold;
+    }
+  }
+  @include  applyTo('xs') {
+    grid-gap: 2em;
+
+    &__profile {
+      width: 80%;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 1fr 50% 1fr;
+      grid-template-areas: 'cv photo pt';
+      align-items: center;
+      justify-content: center;
+       .profile-icon {
+        width:60px;
+        height: 60px;
+        position: relative;
+        z-index: 5;
+      }
+      .profile-cover {
+        grid-area: photo;
+        width: 70%;
+        margin: 0 auto;
+      }
+      
+      .image-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        dd {
+          margin-top: .5em;
+        }
+        
+      }
+      
+    }
+    &__description {
+      max-width: 60%;
+      margin: 0 auto;
+    }
+  }
+  @include  applyTo('xxs') {
+    position: relative;
+    top: 5%;
+    .profile-cover {
+      grid-area: photo;
+      width: 50%;
+      margin: 0 auto;
+    }
+  }
+}
